@@ -1,0 +1,14 @@
+gene,pathway
+ACTB,Cytoskeleton
+GAPDH,Glycolysis
+TFF1,Estrogen response
+GREB1,Estrogen response
+MYC,Cell cycle
+MYC,MYC targets
+MYC,Estrogen response
+CCND1,Cell cycle
+CCND1,Wnt signaling
+TP53,p53 signaling
+TP53,Apoptosis
+VIM,EMT
+IL6,Inflammatory response

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="280" viewBox="0 0 780 280" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<rect x="40" y="34" width="56" height="78" rx="14" ry="14" fill="white" stroke="#333333" stroke-width="1.5"/>
+<circle cx="56" cy="56" r="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<circle cx="78" cy="50" r="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<circle cx="66" cy="72" r="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<circle cx="52" cy="92" r="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<circle cx="82" cy="88" r="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<circle cx="70" cy="102" r="4" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<line x1="104" y1="73" x2="136" y2="73" stroke="#333333" stroke-width="1.5"/>
+<polygon points="142,73 134,69 134,77" fill="#333333"/>
+<path d="M152,50 q8,-6 16,0 q8,6 16,0 q8,-6 16,0 q8,6 16,0 q8,-6 16,0 q8,6 16,0" fill="none" stroke="#2f6f9f" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M160,74 q8,-6 16,0 q8,6 16,0 q8,-6 16,0 q8,6 16,0" fill="none" stroke="#2f6f9f" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M150,98 q8,-6 16,0 q8,6 16,0 q8,-6 16,0 q8,6 16,0 q8,-6 16,0 q8,6 16,0" fill="none" stroke="#2f6f9f" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M166,120 q8,-6 16,0 q8,6 16,0 q8,-6 16,0 q8,6 16,0" fill="none" stroke="#2f6f9f" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="266" y1="73" x2="288" y2="73" stroke="#333333" stroke-width="1.5"/>
+<polygon points="294,73 286,69 286,77" fill="#333333"/>
+<line x1="339" y1="95" x2="351" y2="92" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="308" y1="70" x2="320" y2="67" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="345" y1="45" x2="357" y2="42" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="314" y1="98" x2="326" y2="95" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="351" y1="73" x2="363" y2="70" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="320" y1="48" x2="332" y2="45" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="357" y1="101" x2="369" y2="98" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="326" y1="76" x2="338" y2="73" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="363" y1="51" x2="375" y2="48" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="332" y1="104" x2="344" y2="101" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="369" y1="79" x2="381" y2="76" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="338" y1="54" x2="350" y2="51" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="307" y1="107" x2="319" y2="104" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="344" y1="82" x2="356" y2="79" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="313" y1="57" x2="325" y2="54" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="350" y1="110" x2="362" y2="107" stroke="#2f6f9f" stroke-width="2.2"/>
+<line x1="394" y1="73" x2="436" y2="73" stroke="#333333" stroke-width="1.5"/>
+<polygon points="442,73 434,69 434,77" fill="#333333"/>
+<rect x="452" y="68" width="14" height="44" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="472" y="86" width="14" height="26" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="492" y="50" width="14" height="62" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="512" y="96" width="14" height="16" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="532" y="80" width="14" height="32" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<text x="561" y="104" text-anchor="middle" fill="#777777" font-size="14" font-family="Helvetica, Arial, sans-serif" font-weight="normal">=</text>
+<rect x="572" y="94.4" width="18" height="17.6" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="572" y="84" width="18" height="10.4" fill="#b7d1ea" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="572" y="59.2" width="18" height="24.8" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="572" y="52.8" width="18" height="6.4" fill="#b7d1ea" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="572" y="40" width="18" height="12.8" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<text x="598" y="78" text-anchor="start" fill="#333333" font-size="10.5" font-family="Consolas, Menlo, monospace" font-weight="normal">library size</text>
+<text x="598" y="92" text-anchor="start" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">= all its genes added up</text>
+<text x="68" y="134" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">one sample:</text>
+<text x="68" y="148" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">cells in a tube</text>
+<text x="210" y="134" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">their RNA</text>
+<text x="340" y="134" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">chopped into fragments</text>
+<text x="340" y="148" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">and read — RNA-seq</text>
+<text x="500" y="134" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">count per gene:</text>
+<text x="500" y="148" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">fragments that came from it</text>
+<text x="40" y="172" text-anchor="start" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">one tube of cells, sequenced twice — B read twice as deep:</text>
+<rect x="60" y="222" width="14" height="28" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="80" y="236" width="14" height="14" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="120" y="194" width="14" height="56" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="140" y="222" width="14" height="28" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<text x="77" y="264" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">A</text>
+<text x="137" y="264" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">B</text>
+<line x1="172" y1="222" x2="406" y2="222" stroke="#333333" stroke-width="1.5"/>
+<polygon points="412,222 404,218 404,226" fill="#333333"/>
+<text x="292" y="215" text-anchor="middle" fill="#333333" font-size="11" font-family="Consolas, Menlo, monospace" font-weight="normal">÷ library size</text>
+<text x="430" y="172" text-anchor="start" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">normalised: identical, as they should be</text>
+<rect x="450" y="208" width="14" height="42" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="470" y="229" width="14" height="21" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="510" y="208" width="14" height="42" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<rect x="530" y="229" width="14" height="21" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="0.8"/>
+<text x="467" y="264" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">A</text>
+<text x="527" y="264" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">B</text>
+</svg>

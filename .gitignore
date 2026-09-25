@@ -1,0 +1,10 @@
+# RStudio session state
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Written when you knit or run the classes
+results/
+class[4-7].html
+class[4-7]_files/

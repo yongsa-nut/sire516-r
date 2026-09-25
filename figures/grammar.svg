@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="320" viewBox="0 0 760 320" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<text x="153" y="30" text-anchor="middle" fill="#333333" font-size="12" font-family="Helvetica, Arial, sans-serif" font-weight="bold">data: one row per sample</text>
+<text x="405" y="30" text-anchor="middle" fill="#333333" font-size="12" font-family="Helvetica, Arial, sans-serif" font-weight="bold">aes(): column to property</text>
+<text x="640" y="18" text-anchor="middle" fill="#333333" font-size="12" font-family="Helvetica, Arial, sans-serif" font-weight="bold">geom_point(): one point per row</text>
+<rect x="20" y="44" width="266" height="24" fill="#e6e6e6" stroke="none" stroke-width="1"/>
+<rect x="70" y="44" width="40" height="24" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<rect x="110" y="44" width="96" height="24" fill="#fff1cc" stroke="none" stroke-width="1"/>
+<rect x="206" y="44" width="80" height="24" fill="#e3f1df" stroke="none" stroke-width="1"/>
+<line x1="20" y1="44" x2="286" y2="44" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="20" y1="68" x2="286" y2="68" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="20" y1="92" x2="286" y2="92" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="20" y1="116" x2="286" y2="116" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="20" y1="140" x2="286" y2="140" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="20" y1="164" x2="286" y2="164" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="20" y1="44" x2="20" y2="164" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="70" y1="44" x2="70" y2="164" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="110" y1="44" x2="110" y2="164" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="206" y1="44" x2="206" y2="164" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="286" y1="44" x2="286" y2="164" stroke="#bbbbbb" stroke-width="1"/>
+<text x="45" y="60.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Helvetica, Arial, sans-serif" font-weight="bold">sample</text>
+<text x="90" y="60.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Helvetica, Arial, sans-serif" font-weight="bold">rin</text>
+<text x="158" y="60.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Helvetica, Arial, sans-serif" font-weight="bold">library_size</text>
+<text x="246" y="60.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Helvetica, Arial, sans-serif" font-weight="bold">treatment</text>
+<text x="45" y="84.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">S01</text>
+<text x="90" y="84.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">8.9</text>
+<text x="158" y="84.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">250841</text>
+<text x="246" y="84.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">Control</text>
+<text x="45" y="108.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">S05</text>
+<text x="90" y="108.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">6.7</text>
+<text x="158" y="108.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">123704</text>
+<text x="246" y="108.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">DPN</text>
+<text x="45" y="132.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">S06</text>
+<text x="90" y="132.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">9.3</text>
+<text x="158" y="132.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">175418</text>
+<text x="246" y="132.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">OHT</text>
+<text x="45" y="156.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">S10</text>
+<text x="90" y="156.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">9.0</text>
+<text x="158" y="156.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">146086</text>
+<text x="246" y="156.8" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">Control</text>
+<rect x="330" y="56" width="150" height="24" rx="6" ry="6" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="405" y="72.5" text-anchor="middle" fill="#333333" font-size="11.5" font-family="Consolas, Menlo, monospace" font-weight="normal">x = rin</text>
+<rect x="330" y="92" width="150" height="24" rx="6" ry="6" fill="#fff1cc" stroke="#8a6d00" stroke-width="1"/>
+<text x="405" y="108.5" text-anchor="middle" fill="#333333" font-size="11.5" font-family="Consolas, Menlo, monospace" font-weight="normal">y = library_size</text>
+<rect x="330" y="128" width="150" height="24" rx="6" ry="6" fill="#e3f1df" stroke="#3c7a36" stroke-width="1"/>
+<text x="405" y="144.5" text-anchor="middle" fill="#333333" font-size="11.5" font-family="Consolas, Menlo, monospace" font-weight="normal">colour = treatment</text>
+<line x1="294" y1="104" x2="316" y2="104" stroke="#333333" stroke-width="1.5"/>
+<polygon points="322,104 314,100 314,108" fill="#333333"/>
+<line x1="488" y1="104" x2="520" y2="104" stroke="#333333" stroke-width="1.5"/>
+<polygon points="526,104 518,100 518,108" fill="#333333"/>
+<line x1="540" y1="40" x2="540" y2="190" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="540" y1="190" x2="740" y2="190" stroke="#bbbbbb" stroke-width="1"/>
+<line x1="573.333" y1="190" x2="573.333" y2="194" stroke="#bbbbbb" stroke-width="1"/>
+<text x="573.333" y="206" text-anchor="middle" fill="#777777" font-size="10" font-family="Helvetica, Arial, sans-serif" font-weight="normal">7</text>
+<line x1="640" y1="190" x2="640" y2="194" stroke="#bbbbbb" stroke-width="1"/>
+<text x="640" y="206" text-anchor="middle" fill="#777777" font-size="10" font-family="Helvetica, Arial, sans-serif" font-weight="normal">8</text>
+<line x1="706.667" y1="190" x2="706.667" y2="194" stroke="#bbbbbb" stroke-width="1"/>
+<text x="706.667" y="206" text-anchor="middle" fill="#777777" font-size="10" font-family="Helvetica, Arial, sans-serif" font-weight="normal">9</text>
+<line x1="536" y1="150" x2="540" y2="150" stroke="#bbbbbb" stroke-width="1"/>
+<text x="533" y="153.5" text-anchor="end" fill="#777777" font-size="9.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">150000</text>
+<line x1="536" y1="50" x2="540" y2="50" stroke="#bbbbbb" stroke-width="1"/>
+<text x="533" y="53.5" text-anchor="end" fill="#777777" font-size="9.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">250000</text>
+<text x="640" y="222" text-anchor="middle" fill="#2f6f9f" font-size="11" font-family="Consolas, Menlo, monospace" font-weight="normal">rin</text>
+<text x="540" y="30" text-anchor="middle" fill="#8a6d00" font-size="11" font-family="Consolas, Menlo, monospace" font-weight="normal">library_size</text>
+<circle cx="550" cy="242" r="5" fill="#F8766D" stroke="white" stroke-width="1"/>
+<text x="559" y="246" text-anchor="start" fill="#333333" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">Control</text>
+<circle cx="618" cy="242" r="5" fill="#00BA38" stroke="white" stroke-width="1"/>
+<text x="627" y="246" text-anchor="start" fill="#333333" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">DPN</text>
+<circle cx="686" cy="242" r="5" fill="#619CFF" stroke="white" stroke-width="1"/>
+<text x="695" y="246" text-anchor="start" fill="#333333" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">OHT</text>
+<circle cx="700" cy="49.159" r="5.5" fill="#F8766D" stroke="white" stroke-width="1"/>
+<text x="709" y="53.159" text-anchor="start" fill="#777777" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">S01</text>
+<circle cx="553.333" cy="176.296" r="5.5" fill="#00BA38" stroke="white" stroke-width="1"/>
+<text x="562.333" y="180.296" text-anchor="start" fill="#777777" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">S05</text>
+<circle cx="726.667" cy="124.582" r="5.5" fill="#619CFF" stroke="white" stroke-width="1"/>
+<text x="717.667" y="128.582" text-anchor="end" fill="#777777" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">S06</text>
+<circle cx="706.667" cy="153.914" r="5.5" fill="#F8766D" stroke="white" stroke-width="1"/>
+<text x="697.667" y="157.914" text-anchor="end" fill="#777777" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">S10</text>
+<rect x="92" y="268" width="104" height="22" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="144" y="283.84" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">ggplot(libs,</text>
+<rect x="204" y="268" width="408" height="22" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="408" y="283.84" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">aes(x = rin, y = library_size, colour = treatment))</text>
+<rect x="620" y="268" width="118" height="22" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="679" y="283.84" text-anchor="middle" fill="#333333" font-size="12" font-family="Consolas, Menlo, monospace" font-weight="normal">+ geom_point()</text>
+<text x="144" y="306" text-anchor="middle" fill="#777777" font-size="11" font-family="Helvetica, Arial, sans-serif" font-weight="normal">data</text>
+<text x="408" y="306" text-anchor="middle" fill="#777777" font-size="11" font-family="Helvetica, Arial, sans-serif" font-weight="normal">mapping</text>
+<text x="679" y="306" text-anchor="middle" fill="#777777" font-size="11" font-family="Helvetica, Arial, sans-serif" font-weight="normal">geom</text>
+<text x="153" y="184" text-anchor="middle" fill="#777777" font-size="11" font-family="Helvetica, Arial, sans-serif" font-weight="normal">… and eight more rows</text>
+</svg>

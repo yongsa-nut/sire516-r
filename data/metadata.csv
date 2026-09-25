@@ -1,0 +1,13 @@
+sample,patient,treatment,time,rin
+S01,P1,Control,24h,8.9
+S02,P1,DPN,24h,7.8
+S03,P1,OHT,48h,9.1
+S04,P2,Control,24h,8.4
+S05,P2,DPN,48h,6.7
+S06,P2,OHT,24h,9.3
+S07,P3,Control,48h,8.1
+S08,P3,DPN,24h,7.4
+S09,P3,OHT,48h,8.7
+S10,P4,Control,48h,9.0
+S11,P4,DPN,48h,7.9
+S12,P4,OHT,24h,8.6

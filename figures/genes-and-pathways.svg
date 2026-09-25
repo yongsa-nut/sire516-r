@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="262" viewBox="0 0 800 262" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<text x="90" y="22" text-anchor="start" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">total count per gene, all twelve samples</text>
+<text x="84" y="45" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">ACTB</text>
+<rect x="90" y="36" width="220" height="11" fill="#fff1cc" stroke="none" stroke-width="1"/>
+<text x="315" y="45" text-anchor="start" fill="#777777" font-size="9.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">984,836</text>
+<text x="84" y="60" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">GAPDH</text>
+<rect x="90" y="51" width="216.778" height="11" fill="#fff1cc" stroke="none" stroke-width="1"/>
+<text x="311.778" y="60" text-anchor="start" fill="#777777" font-size="9.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">970,412</text>
+<text x="84" y="75" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">KRT18</text>
+<rect x="90" y="66" width="11.8203" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="106.82" y="75" text-anchor="start" fill="#777777" font-size="9.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">52,914</text>
+<text x="84" y="90" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">TP53</text>
+<rect x="90" y="81" width="7.55184" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="84" y="105" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">VIM</text>
+<rect x="90" y="96" width="4.12641" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="84" y="120" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">TFF1</text>
+<rect x="90" y="111" width="3.42632" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="84" y="135" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">MYC</text>
+<rect x="90" y="126" width="3.1062" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="84" y="150" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">CCND1</text>
+<rect x="90" y="141" width="2.37103" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="84" y="165" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">GREB1</text>
+<rect x="90" y="156" width="1.83334" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="84" y="180" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">ESR1</text>
+<rect x="90" y="171" width="1.3611" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="84" y="195" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">PGR</text>
+<rect x="90" y="186" width="1" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="84" y="210" text-anchor="end" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">IL6</text>
+<rect x="90" y="201" width="1" height="11" fill="#dbe9f6" stroke="none" stroke-width="1"/>
+<text x="200" y="250" text-anchor="middle" fill="#8a6d00" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">two genes carry almost every count in the file</text>
+<text x="457" y="22" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">gene</text>
+<text x="705" y="32" text-anchor="middle" fill="#777777" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">pathway</text>
+<line x1="484" y1="38" x2="640" y2="48" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="54.5" x2="640" y2="66" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="71" x2="640" y2="84" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="87.5" x2="640" y2="84" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="104" x2="640" y2="102" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="104" x2="640" y2="120" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="104" x2="640" y2="84" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="120.5" x2="640" y2="102" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="120.5" x2="640" y2="138" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="137" x2="640" y2="156" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="137" x2="640" y2="174" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="153.5" x2="640" y2="192" stroke="#999999" stroke-width="1"/>
+<line x1="484" y1="170" x2="640" y2="210" stroke="#999999" stroke-width="1"/>
+<rect x="430" y="30" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="41.52" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">ACTB</text>
+<rect x="430" y="46.5" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="58.02" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">GAPDH</text>
+<rect x="430" y="63" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="74.52" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">TFF1</text>
+<rect x="430" y="79.5" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="91.02" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">GREB1</text>
+<rect x="430" y="96" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="107.52" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">MYC</text>
+<rect x="430" y="112.5" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="124.02" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">CCND1</text>
+<rect x="430" y="129" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="140.52" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">TP53</text>
+<rect x="430" y="145.5" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="157.02" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">VIM</text>
+<rect x="430" y="162" width="54" height="16" rx="5" ry="5" fill="#dbe9f6" stroke="#2f6f9f" stroke-width="1"/>
+<text x="457" y="173.52" text-anchor="middle" fill="#333333" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">IL6</text>
+<rect x="430" y="178.5" width="54" height="16" rx="5" ry="5" fill="white" stroke="#777777" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="457" y="190.02" text-anchor="middle" fill="#777777" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">ESR1</text>
+<text x="492" y="190.5" text-anchor="start" fill="#777777" font-size="9.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">no pathway</text>
+<rect x="430" y="195" width="54" height="16" rx="5" ry="5" fill="white" stroke="#777777" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="457" y="206.52" text-anchor="middle" fill="#777777" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">PGR</text>
+<text x="492" y="207" text-anchor="start" fill="#777777" font-size="9.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">no pathway</text>
+<rect x="430" y="211.5" width="54" height="16" rx="5" ry="5" fill="white" stroke="#777777" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="457" y="223.02" text-anchor="middle" fill="#777777" font-size="10" font-family="Consolas, Menlo, monospace" font-weight="normal">KRT18</text>
+<text x="492" y="223.5" text-anchor="start" fill="#777777" font-size="9.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">no pathway</text>
+<rect x="640" y="40" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="51.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">Cytoskeleton</text>
+<rect x="640" y="58" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="69.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">Glycolysis</text>
+<rect x="640" y="76" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="87.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">Estrogen response</text>
+<rect x="640" y="94" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="105.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">Cell cycle</text>
+<rect x="640" y="112" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="123.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">MYC targets</text>
+<rect x="640" y="130" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="141.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">Wnt signaling</text>
+<rect x="640" y="148" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="159.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">p53 signaling</text>
+<rect x="640" y="166" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="177.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">Apoptosis</text>
+<rect x="640" y="184" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="195.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">EMT</text>
+<rect x="640" y="202" width="130" height="16" rx="5" ry="5" fill="white" stroke="#bbbbbb" stroke-width="1"/>
+<text x="705" y="213.52" text-anchor="middle" fill="#333333" font-size="9.5" font-family="Consolas, Menlo, monospace" font-weight="normal">Inflammatory response</text>
+<text x="600" y="250" text-anchor="middle" fill="#2f6f9f" font-size="10.5" font-family="Helvetica, Arial, sans-serif" font-weight="normal">13 lines, one per row of gene_info.csv — MYC has three, three genes have none</text>
+</svg>
