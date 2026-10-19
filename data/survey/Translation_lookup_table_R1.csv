@@ -1,0 +1,186 @@
+﻿EN,TH,JA
+2025 BioHackathon participant in Japan,เป็นผู้เข้าร่วม 2025 BioHackathon ที่ประเทศญี่ปุ่น,2025年 日本バイオハッカソン参加者
+Participant of previous BioHackathons (any country),เคยเข้าร่วม BioHackathon ครั้งก่อนๆ (ในประเทศใดก็ได้),過去のバイオハッカソン参加者（国を問わず）
+Not a BioHackathon participant,ไม่เคยเข้าร่วม BioHackathon,バイオハッカソンに参加したことはない
+Sequence analysis,การวิเคราะห์ลำดับพันธุกรรม (Sequence analysis),シーケンス・アナリシス (Sequence analysis)
+Genomics and transcriptomics,จีโนมิกส์และทรานสคริปโตมิกส์ (Genomics and transcriptomics),ゲノミクス・トランスクリプトミクス (Genomics and transcriptomics)
+Metagenomics and microbiome informatics,เมตาจีโนมิกส์และไมโครไบโอม (Metagenomics and microbiome informatics),メタゲノミクス・マイクロバイオーム情報学 (Metagenomics and microbiome informatics)
+Epigenomics and regulatory genomics,จีโนมิกส์เหนือพันธุกรรมและจีโนมิกส์เชิงกำกับ (Epigenomics and regulatory genomics),エピゲノミクス・制御ゲノミクス (Epigenomics and regulatory genomics)
+Proteomics and metabolomics,โปรตีโอมิกส์และเมแทบอโลมิกส์ (Proteomics and metabolomics),プロテオミクス・メタボロミクス (Proteomics and metabolomics)
+Structural bioinformatics,ชีวสารสนเทศศาสตร์โครงสร้าง (Structural bioinformatics),構造バイオインフォマティクス (Structural bioinformatics)
+Systems biology,ชีววิทยาระบบ (Systems biology),システムバイオロジー (Systems biology)
+Computational evolutionary biology,ชีววิทยาเชิงวิวัฒนาการเชิงคำนวณ (Computational evolutionary biology),計算進化生物学 (Computational evolutionary biology)
+Cheminformatics,เคมีสารสนเทศ (Cheminformatics),ケモインフォマティクス (Cheminformatics)
+Medical/clinical informatics,สารสนเทศทางการแพทย์/คลินิก (Medical/clinical informatics),医療・臨床インフォマティクス (Medical/clinical informatics)
+Biostatistics,ชีวสถิติ (Biostatistics),生物統計学 (Biostatistics)
+Machine learning and AI,การเรียนรู้ของคอมพิวเตอร์ และปัญญาประดิษฐ์ (Machine learning and AI),機械学習・AI (Machine learning and AI)
+Data visualization,การสร้างภาพข้อมูล (Data visualization),データ可視化 (Data visualization)
+Ontology creation,การสร้างออนโทโลยี (Ontology creation),オントロジー構築 (Ontology creation)
+Data standards and interoperability,มาตรฐานข้อมูลและการทำงานร่วมกันของข้อมูล (Data standards and interoperability),データ標準化・相互運用性 (Data standards and interoperability)
+Database management,การจัดการฐานข้อมูล (Database management),データベース管理 (Database management)
+HPC and cloud bioinformatics,ชีวสารสนเทศศาสตร์บนคลาวด์และคอมพิวเตอร์สมรรถนะสูง (HPC and cloud bioinformatics),HPC・クラウドバイオインフォマティクス (HPC and cloud bioinformatics)
+Front-end development,การพัฒนาส่วนหน้า (Front-end development),フロントエンド開発 (Front-end development)
+Back-end development,การพัฒนาส่วนหลัง (Back-end development),バックエンド開発 (Back-end development)
+Academia,มหาวิทยาลัย,教育・研究機関
+Public sector,หน่วยงานภาครัฐ,公的機関
+Private sector,หน่วยงานภาคเอกชน,民間企業
+< 25 years old,< 25 ปี,24歳未満
+25 - 34,25 - 34 ปี,25〜34歳
+35 - 44,35 - 44 ปี,35〜44歳
+45 - 54,45 - 54 ปี,45~54歳
+> 55 years old,55+ ปี,55歳以上
+Prefer not to answer,ไม่สะดวกให้ข้อมูล,回答しない
+Man,ผู้ชาย,男性
+Woman,ผู้หญิง,女性
+Non-binary,เพศทางเลือก,ノンバイナリー（いずれにも当てはまらない）
+I am an AI researcher,นักวิจัยเกี่ยวกับ AI (AI researcher),AI研究者である
+I am an AI developer,นักพัฒนา AI (AI developer),AI開発者である
+I use AI everyday,ใช้ AI ทุกวัน,毎日AIを利用している
+I use AI a few times a week,ใช้ AI หลายครั้งในหนึ่งสัปดาห์,週に数回AIを利用している
+I use AI a few times a month,ใช้ AI หลายครั้งในหนึ่งเดือน,月に数回AIを利用している
+I never use AI,ไม่เคยใช้ AI,AIを利用していない
+I don't trust the companies who make AI.,ไม่ไว้วางใจบริษัทที่สร้าง AI,AIを提供する企業を信頼していない
+AI as a technology is not useful for my work.,เทคโนโลยี AI ไม่มีประโยชน์ต่องาน,AIという技術は自分の業務に役立たない
+It's too expensive.,มีค่าใช้จ่ายสูงเกินไป,費用が高すぎる
+I don't trust the results or underlying technology.,ไม่เชื่อมั่นในผลลัพธ์หรือตัวเทคโนโลยี,結果や基盤となる技術を信頼していない
+I use AI to complete the entire task with little to no editing,ใช้ AI ทำงานทั้งหมดจนเสร็จ โดยแก้ไขเพียงเล็กน้อยหรือไม่แก้ไขเลย,編集をほとんど行わず、AIにタスク全体を任せている
+"I use AI to generate a first draft, which I then edit and finalize",ใช้ AI สร้างฉบับร่างแรก จากนั้นจึงนำมาแก้ไขจนสมบูรณ์,AIに下書きを作成させ、その後自分で編集して完成させている
+I use AI to assist with specific parts of a task,ใช้ AI สำหรับงานบางส่วนเท่านั้น,タスクの特定の部分にのみAIを利用している
+AI tools are too complex or not user-friendly,เครื่องมือ AI ซับซ้อนหรือใช้งานยากเกินไป,AIツールが複雑で、使いやすくない
+AI outputs are inaccurate or unreliable,ผลลัพธ์จาก AI ไม่แม่นยำหรือไม่น่าเชื่อถือ,AIの出力が不正確または信頼できない
+AI suggestions are difficult to interpret,ข้อเสนอแนะจาก AI ตีความหรือนำไปใช่ได้ยาก,AIの提案が解釈しづらい
+Difficulty integrating AI into existing workflows,ปัญหาในการนำ AI มาใช้ร่วมกับขั้นตอนการทำงานที่มีอยู่,既存のワークフローに統合しにくい
+"Lack of institutional support (software, hardware, guidance)",ขาดการสนับสนุนจากองค์กร (เช่น ซอฟต์แวร์、 ฮาร์ดแวร์、 คำแนะนำ),所属機関からの支援が不足している（ソフトウェア、ハードウェア、指導など）
+High computational cost / resources required,ต้นทุนในการประมวลผลสูง / ต้องใช้ทรัพยากรมาก,計算コスト／必要なリソースが高い
+"Data limitations (size, quality, accessibility)",ข้อจำกัดด้านข้อมูล (เช่น ขนาด、 คุณภาพ、 การเข้าถึง),データの制約（サイズ、品質、アクセス可能性）
+Ethical or privacy concerns,ข้อกังวลด้านจริยธรรมหรือความเป็นส่วนตัว,倫理的またはプライバシー上の懸念
+Over-reliance on AI leading to mistakes,การพึ่งพา AI มากเกินไปจนนำไปสู่ข้อผิดพลาด,AIへの過度な依存によるミス
+1 (Not at all),1 (ไม่พึงพอใจเลย),1 - まったく満足していない
+5 (Very satisfied),5 (พึงพอใจอย่างมาก),5 - 非常に満足している
+Accuracy & reliability,ความแม่นยำและความน่าเชื่อถือ,正確性および信頼性
+Usability & efficiency,การใช้งานง่าย (usability) และประสิทธิภาพ (efficiency),操作性および効率性
+Control & customization,การควบคุมและการปรับแต่ง (control and optimization),制御およびカスタマイズ性
+"Privacy, security & ethics",ความเป็นส่วนตัว ความปลอดภัย และจริยธรรม,プライバシー・セキュリティおよび倫理
+Provides its own self-hosted AI services,มีบริการ AI ขององค์กรเอง (self-hosted),独自のAIサービス（オンプレミス／自社運用）の提供
+"Access to institutional AI software or platforms (licenses, subscriptions)",การให้สิทธิ์เข้าถึงซอฟต์แวร์หรือแพลตฟอร์ม AI (เช่น license、 subscription),所属機関が契約するAIソフトウェアやプラットフォームへのアクセス（ライセンス、サブスクリプションなど）
+Access to high-performance computing / GPU resources,การสนับสนุนการเข้าถึงทรัพยากรคอมพิวเตอร์สมรรถนะสูง / GPU,ハイパフォーマンスコンピューティング／GPUリソースへのアクセス
+Dedicated AI support staff or help desk,มีเจ้าหน้าที่หรือ help desk ที่ให้การสนับสนุนด้าน AI โดยเฉพาะ,専任のAIサポートスタッフやヘルプデスクの設置
+Training/workshops on AI tools or prompt engineering,การจัดฝึกอบรม/เวิร์กช็อปเกี่ยวกับเครื่องมือ AI หรือ prompt engineering,AIツールやプロンプトエンジニアリングに関する研修・ワークショップの実施
+Support for integrating AI into research workflows,การสนับสนุนการนำ AI มาปรับใช้ในขั้นตอนการทำวิจัย,研究ワークフローへのAI統合に関する支援
+Guidance on ethical use of AI / AI governance policies,คำแนะนำด้านจริยธรรมในการใช้ AI / นโยบายการกำกับดูแล AI,AIの倫理的利用やガバナンスに関する指針の提供
+Funding or grants for AI-related projects,เงินทุนสนับสนุนสำหรับโครงการที่เกี่ยวข้องกับ AI,AI関連プロジェクトへの資金提供や助成
+1 - Not concerned at all,1 - ไม่กังวลเลย,1 - まったく懸念していない
+5 - Very concerned,5 - กังวลมากที่สุด,5 - 非常に懸念している
+Thailand,ไทย,タイ
+Switzerland,สวิสเซอร์แลนด์,スイス
+Japan,ญี่ปุ่น,日本
+Small business owner,SME,個人事業
+Hospital,สถานพยาบาล,病院
+Significantly increasing coding speed from 1 month to 1 day,การเพิ่มความเร็วในการเขียนโค้ดได้มาก จาก 1 เดือน เหลือ 1 วัน,
+"I haven't yet, because I understand the process of building a model and I'm aware of the potential mistakes that can occur.",ยังไม่เคย เพราะ เข้าใจวิธีการสร้างโมเดล และตระหนักถึงความผิดพลาดที่อาจจะเกิดขึ้น,
+"Using LMMs, such as ChatGPT, Gemini, and Grammarly, to help refine academic articles and research project reports has significantly shortened the working time.",ใช้ LMM ได้แก่ ChatGPT、 Germini、 and Grammarly ในการช่วยปรับแต่งบทความวิชาการและรายงานโครงการวิจัย ทำให้ช่วยย่นระยะเวลาการทำงานได้เป็นอย่างมาก,
+"It creates non-existent articles or references, which shows that you shouldn't trust AI too much.",สร้างบทความหรือเอกสารอ้างอิงที่ไม่มีอยู่จริง ทำให้รู้ว่า ไม่ควรเชื่อ AI มากนัก,
+Not yet,ยังไม่มี,
+Search for articles about building a prediction model,Search บทความที่ต้องการหา ทำ prediction model,
+"I mostly use it to write short scripts. ChatGPT is effective for this purpose, as it is fast and convenient.",ส่วนใหญ่ใช้เขียนสคริปต์สั้นๆ โดย chatGPT ก็สามารถใช้งานได้ดี เร็ว สะดวก,
+Miscalculate simple calculations,คำนวณผิดแบบง่ายๆ,
+Incorrect information,ข้อมูลไม่ถูกต้อง,
+Use ChatGPT to revise sentences in proposals or manuscripts,ใช้ ChatGPT ในการปรับแก้/ขัดเกลาประโยคในข้อเสนอโครงการหรือต้นฉบับบทความ,
+AI provides citations that are not existed or not directly related to to content.,AI ให้ข้อมูลอ้างอิงที่ไม่มีอยู่จริง หรือไม่เกี่ยวข้องโดยตรงกับเนื้อหา,
+"I mostly use it for writing and editing code in Python. Generally, it's for data management, EDA & visualization, statistical analysis, and building ML models. I use Gemini (and Gemini in Colab) to help brainstorm and write code for data pre-processing and model development. The result is that I can get these steps done much faster. Instead of having to write the scripts for every step myself, the AI can write it quickly and even fix bugs immediately (in Colab).",ส่วนใหญ่ใช้กับการเขียนและแก้ไขโค้ด เช่น python โดยทั้วไปใช้เพื่อการจัดการข้อมูล EDA & visualization การวิเคราะห์เชิงสถิติ รวมถึงการทำ ML model โดยใช้ Gemini (and Gemini in Colab)ในการช่วยคิดและเขียนโค้ดสำหรับการทำ data pre-processing และพัฒนาโมเดล ผลลัพธ์คือสามารถทำงานstepเหล่านี้ได้เร็วขึ้น จากที่ต้องเขียนสคริปสำหรับการทำงานในทุกเสตปด้วยตนเอง >> ใช้AIเขียนได้เร็ว และAIสามารถแก้ไขbug ได้ทันที(in colab),
+"Even when using AI for large-scale data management, it's crucial to review the script carefully every time. This is because the AI can sometimes introduce small, unwanted steps. For instance, it might try to fill NaN values with a certain calculated value, when I might prefer to keep them as NaN or simply drop them entirely (drop.na). Another example is when merging two tables, it might accumulate certain parameters (using +=) and insert that result into the merged dataframe.
+When conducting research for academic questions that require support from research articles, I have often found that the reference links provided by the AI cannot be opened. Furthermore, I can't find these sources with a Google search. So I cannot trust the answers or conclusions it provides. ( Free version of ChatGPT).","แม้จะใช้AI ในการจัดการข้อมูลขนาดใหญ่ แต่อย่างไรก็ตามเราจำเป็นต้องอ่านสคริปอย่างละเอียดทุกครั้ง เพราะบางที AIก็มีขั้นตอนเล็กๆที่เราอาจไม่ต้องการ เช่น พยายามหาค่าอะไรสักอย่างมาfill NaN ซึ่งเราไม่ได้อยากใช้ค่านั้นๆ/ต้องการให้เป็น NaN เหมือนเดิมหรือ drop.na ไปเลย หรือการรวมตาราง2อันเข้าด้วยกันแล้วมีการaccumulate พารามิเตอร์บางตัว (+=) แล้วเอามาใส่ใน merge_df แทน
+
+ในเชิงการค้นคว้าข้อมูลจากงานวิจัย/คำถามเชิงวิชาการที่ต้องการreserach article support ในหลายๆครั้ง พบว่าลิ้งreferencesที่ให้มา ไม่สามารถเปิดได้ และหาเพิ่มเติมจากgoogleไม่เจอ ทำให้ไม่สามารถเชื่อถือในคำตอบหรือข้อสรุปที่ให้มาได้ (ChatGPT ตัวใช้ฟรี)",
+"Additional questions to ask are: To what extent and in what ways does the organization have expectations, awareness, and concerns about using AI in the workplace? In what areas does it support its use, and what forms of usage is the organization concerned about?",คำถามที่ควรถามเพิ่ม คือ องค์กรมีความคาดหวัง ความตระหนัก ความกังวลในการใช้AI ในการทำงานมากน้อยเพียงใด อย่างไร สนับสนุนในการใช้้เชิงไหน และการใช้ในรูปแบบใดที่องค์กรconcern,
+Create python script using pysam to mannually phase variant into different haplotype,สร้างสคริปต์ Python โดยใช้ pysam เพื่อกำหนดเฟสของ variant ไปยัง haplotype ต่างๆ,
+AI give a wrong answer so I just realize that using AI should be use with knowledge in that field,AI ให้คำตอบผิดมา เลยเพิ่งเข้าใจว่าการจะใช้ AI เราก็ต้องมีความรู้ในเรื่องนั้นๆ ด้วย,
+Edit English in a manuscript leading to successful publication,ช่วยแก้ภาษา ใน manuscript จนได้รับตีพิมพ์,
+It doesn't learn from its mistakes and just repeats them.,ตอบผิด แล้วไม่เรียนรู้่ กลับไปตอบผิดเหมือนเดิม,
+Write proposal(s),เขียน proposal,
+Wrong reference(s),reference ผิด,
+Resercher,นักวิจัย,
+Develop deep learning for data analysis,พัฒนา deep learning เพื่อนวิเคราะห์ข้อมูล เจ,
+None,ไม่มี,
+Used as a guide or for teaching content drafting.,ใช้เป็นแนวทางหรือการสอน การร่างเนื้อหา,
+Providing information that is overly pleasing and not based on facts.,การให้ข้อมูลที่เราพึงพอใจมากเกินไป ไม่อยู่บนข้อเท็จจริง,
+"Debugging code with chatGPT, get guidance on code adjustment",Debugging code ด้วย chatGPT ทำให้ได้แนวทางมาปรับแก้ code,
+"When asked many questions, the AI tends to forget the initial information.",พอถามหลายๆคำถาม AI มักลืมข้อมูลแรกๆ,
+Translate the paper and summarize the main points.,แปลเปเปอร์และสรุปจับใจความสำคัญ,
+"Incorrect translation, wrong answers, and processing errors",แปลผิด และตอบคำถามผิด ปีะมวลผลพลาด,
+"Used for debugging or finding errors in code with ChatGPT, resulting in correct, usable code and ideas for code modifications",ใช้ในการแก้ไขโค้ดหรือหาจุดผิดในโค้ด、Chatgpt、ได้โค้ดที่ถูกต้องสามารถใช้งานได้และไอเดียในการแก้ไขโค้ด,
+"Provides incorrect or unusable coding advice, requiring additional research from other sources",ให้คำแนะนำการเขียนโค้ดที่ผิดพลาดหรือไม่สามารถใช้งานได้ ทำให้ต้องมีการค้นหาข้อมูลจากแหล่งอื่นเพิ่มเติม,
+"I have been using AI tools to assist in preparing manuscripts and research grant proposals. Typically, I provide the conceptual framework together with brief descriptions of research activities, expected outputs, and outcomes, and then prompt the AI to expand these into detailed narrative paragraphs—particularly for sections such as impact and stakeholder engagement. AI has also been very helpful for language refinement, especially in English, which is not my mother tongue. At times, I use ChatGPT’s deep research function to draft literature reviews with citations; however, the outputs are not always precise and often require substantial revision. Even so,AI has significantly reduced my workload. For narrative writing in Thai, I find Gemini generally performs better than GPT.",ใช้ AI เพื่อช่วยในการเตรียมต้นฉบับงานวิจัยและข้อเสนอโครงการเพื่อขอทุนวิจัย โดยทั่วไป จะป้อนกรอบแนวคิดพร้อมกับคำอธิบายสั้นๆ เกี่ยวกับกิจกรรมการวิจัย ผลผลิตและผลลัพธ์ที่คาดหวัง จากนั้นจะสั่งให้ AI ขยายความสิ่งเหล่านี้ให้เป็นย่อหน้าที่มีรายละเอียด โดยเฉพาะอย่างยิ่งสำหรับส่วนที่เกี่ยวกับผลกระทบและการมีส่วนร่วมของผู้มีส่วนได้ส่วนเสีย AI ยังมีประโยชน์อย่างมากในการขัดเกลาภาษา โดยเฉพาะภาษาอังกฤษซึ่งไม่ใช่ภาษาแรก ในบางครั้ง ก็ใช้ฟังก์ชันการค้นคว้าเชิงลึกของ ChatGPT เพื่อร่างการทบทวนวรรณกรรมพร้อมการอ้างอิง อย่างไรก็ตาม ผลลัพธ์ที่ได้ก็ไม่แม่นยำเสมอไปและมักจะต้องมีการแก้ไขปรับปรุงอย่างมาก ถึงกระนั้น AI ก็ได้ช่วยลดภาระงานลงอย่างมาก สำหรับการเขียนในภาษาไทย พบว่าโดยทั่วไปแล้ว Gemini ทำได้ดีกว่า GPT,
+"They sometime do not fully understand the prompt. Sometimes response with WRONG information especially some information that require real world experience. Always overly extremely optimistic. Therefore, I am not 100% trust the answer from AI.",บางครั้ง AI ก็ไม่เข้าใจคำสั่งได้ทั้งหมด บางครั้งก็ตอบกลับมาด้วยข้อมูลที่ผิด โดยเฉพาะอย่างยิ่งข้อมูลบางอย่างที่ต้องใช้ประสบการณ์จากโลกแห่งความเป็นจริง และมักจะมองโลกในแง่ดีมากเกินไปเสมอ ดังนั้น จึงไม่ไว้วางใจคำตอบจาก AI 100%,
+"As a RESEARCHER, I think there is a key message that we should always keep in mind : “Generative AI should only be used when we are clearly certain about the output or the kind of work we want it to produce. If we do not yet know what the output should look like, I think that means we are not ready to use it. Because we must first know what the output ought to look like—only then can we be reasonably confident that we have the ability to properly evaluate it.""",ในฐานะนักวิจัย คิดว่ามีข้อความสำคัญที่เราควรจำไว้เสมอว่า: “ควรใช้ Generative AI ก็ต่อเมื่อเราแน่ใจอย่างชัดเจนเกี่ยวกับผลลัพธ์หรืองานประเภทที่เราต้องการให้มันสร้างขึ้นเท่านั้น หากเรายังไม่รู้ว่าผลลัพธ์ควรมีหน้าตาเป็นอย่างไร นั่นหมายความว่าเรายังไม่พร้อมที่จะใช้มัน เพราะเราต้องรู้ก่อนว่าผลลัพธ์ที่ควรจะเป็นนั้นหน้าตาเป็นอย่างไร—เมื่อถึงตอนนั้นเราจึงจะมั่นใจได้อย่างสมเหตุสมผลว่าเรามีความสามารถที่จะประเมินมันได้อย่างเหมาะสม,
+Research planning,วางแผนงานวิจัย,
+"It can provide a broad overview, but lacks detail and accuracy.",บอกได้กว้างๆแต่ไม่ได้ละเอียดแม่นยำ,
+,,
+Prognosis prediction of diabetic kidney disease progression using deep learning and mathematical models.,,深層学習＋数理モデルを用いた糖尿病線腎臓病の予後（増悪）予測
+Data analysis using AI technology (biology and epidemiology),,AI技術を使用したデータ解析（生物学・疫学）
+Development of AI Architecture Contributing to Mental Health Care,,メンタルヘルスケアに資するAIアーキテクチャの開発
+PLaMo translate,,PLaMo翻訳
+For vocabulary translation,,語彙の翻訳
+"I used Claude for command-line tool development, which significantly reduced the development time. I also frequently use AI for proofreading papers and creating abstracts for international conferences, often employing ChatGPT and Grammarly for these tasks.",,コマンドラインツール開発でClaudeを用いましたが、開発期間を大幅に抑えることができました。また、論文の校正や国際会議の要旨作成での活用も多く、この場合、ChatGPTやGrammarlyを使うことが多いです。
+Japanese translation for [URL redacted] 、[URL redacted] 、 [URL redacted] etc.,,[URL redacted] の日本語翻訳、[URL redacted] 、 [URL redacted] 等
+"Shell script coding, ChatGPT... My experience with Shell script is still limited, but I no longer need to search for things like commands etc. I no longer need to study programming languages I'm not good at from scratch.",,shellscriptのコーディング、chatGPT、shellscriptの経験は浅いがコマンドなどの調査をすることがなくなった。苦手なプログラミング言語についてイチから勉強することがなくなった
+"For Python coding, I practiced while asking the AI, and became able to read code fairly well within my first 2-3 months.",,pythonのコーディングについて、AIに聴きながら実践を行い、初めて2-3ヶ月でコードをおおよそ読めるようになった
+We were able to significantly shorten the project timeline.,,工期を大幅に短縮することができた
+"By leveraging AI, the knowledge transfer process became more efficient, enabling student part-timers with no domain knowledge to create content such as fitness apps using Suno and GPT.",,AI活用により知識の引き継ぎプロセスが効率化し、ドメイン知識の全くない学生バイトにsunoとGPTでフィットネスアプリなどのコンテンツを作成してもらった。
+"I was always concerned by my code writing (especially its cleanliness), but now it has improved thanks to AI",,常に悩まされていたコーディングの書き方（特に綺麗さ）が改善された
+I was able to successfully develop without errors on a programming language I had never used before thanks to the development advices I got from ChatGPT-5,,使用したことのないプログラミング言語の開発アドバイスをChatGPT-5にもらい、エラーなく実装することができた
+For the task of porting an existing program to another language,,すでにあるプログラムを、他言語に移植する作業
+To discover new literature in my fields of interest,,興味のある分野の文献を新しく発見したこと
+"By coding with Gemini Pro 2.5 for data visualization, I was able to create more visually appealing figures.",,データ可視化のためにGemini Pro 2.5を使用してコーディングしたことで、より見やすい図を作成できた。
+"Reducing coding tasks, saving time",,コーディングタスクの省力化、時間削減
+Using ChatGPT to prepare and translate abstracts of academic conferences,,学会等の要旨作成、翻訳　ChatGPTを利用
+"We are using LLM to curate the sample data of experiments. Due to the massive volume of target data, we are utilizing local LLMs (Llama3, Qwen3, etc.). In an evaluation using a manually defined reference set, Llama 3.1 70B achieved about 90% accuracy.",,LLMを使って実験サンプルデータのキュレーションをしています。対象としているデータが膨大なため、ローカルLLM(Llama3、 Qwen3、etc.)を使っています。マニュアルで定義した正解セットを使った評価で、Llama3.1 70b は 90% 程度の正確性を示しました。
+I've become able to use Python on my own for my research.,,自力でPythonを自分の研究に使えるようになった
+We compared the Material Transfer Agreements (MTAs) between UKBiobank and Japanese biobanks using Google Gemini Pro-2.5 and identified gaps in the Japanese MTAs.,,UKBiobankと日本のバイオバンクのMaterial transfer agreementをgoogle gemini pro-2.5を使って比較し、日本のMTAに足りないところを抽出した。
+"I write programs for work. It helps that it creates documentation at the same time. Also, for personal projects, it worked quite well for name matching (matching items with nearly identical but slightly different names).",,業務上プログラムを書きます。このときに同時にドキュメントも作ってくれるので、たすかることがあります。また個人的なプロジェクトでは、名寄せ（なよせ、ほとんど同じ名前だがちょっと違うものを一致させる）などがうまくいきました。
+"To compare symbol visibility, I created a JavaScript tool using ChatGPT that allows users to modify parameters such as line thickness, dashed lines, and color via a UI and display the results.",,記号の視認性を比較するため、線の太さ・破線・色などのパラメータをUIで変更し、結果を表示できるJavaScriptツールをChatGPTを使って作成した。
+Building web applications,,Webアプリの構築
+I was able to generate the code needed for analysis without spending much time on it using VSCode Copilot.,,vscode copilot で解析に必要なコードを時間をかけずに作成できた
+"When it created the walking course for us, it significantly reduced the planning time.",,ウォーキングコースを作成してくれた時。プランニングを大きく時短できた。
+"Paper Review, ChatGPT, Achieve Overwhelming Time Savings and High-Quality Review Construction",,論文レビュー、ChatGPT、圧倒的な時間短縮と質の高いレビュー構築を実現
+"For coding, it has been a huge help.",,codingは非常に助かっています。
+I can't edit the code I generated with AI...,,AIで作成したコードを再編集できない・・・
+"When it's a task I don't fully understand myself, it sometimes takes time to realize that ChatGPT is heading in the wrong direction.",,自分がしっかり理解していない作業だと、chatgptがトンチンカンな方向に進んでいることに気づくまでに、時間がかかる時がある。
+"When tackling complex problems that are difficult to explain in a single sentence, breaking them down into a long, sequential flow and then processing them step-by-step in a chat format often leads to forgetting the initial flow.",,文章で一度に説明するのが難しい問題を、連続した長いフローに割してからChat形式で順番に処理していくと、初期のフローを忘れる
+It takes time to verify if the paper it proposes is fictitious or not,,架空の論文を提案しており、確認に時間がかかる
+"I created an annotation program using AI. At first glance, it seemed to be working well, but I discovered it wasn't functioning properly under specific conditions and was making mistakes. I learned that I still need to perform the final code review and checks myself.",,あるアノテーションプログラムをAIを用いて作成しました。一見うまく動作しているように思えたのですが、細かな条件に対してうまく動作せず、ミスが起こっていることがわかりました。やはり自分自身で最終的なコードレビューやチェックが必要であると学びました。
+Markdown markup was preserved without translation (except when using PLaMo translation). Some symbol substitution occurred before and after translation. Models that have undergone adjustments to the base model are important.,,Markdown のマークアップをキープしたまま翻訳が行われなかった(PLaMo翻訳 以外では)。翻訳前後で記号に何らかの置換が行われた。基盤モデルに対して何らかの調整を行ったモデルは重要である。
+Unintended specifications have been arbitrarily incorporated into the software.,,ソフトウェアにおいて意図しない仕様が勝手に組み込まれている。
+"I was modifying the code to achieve the desired results, but ultimately couldn't make it work, so I had to rewrite the code from scratch.",,期待の結果を得るためにコードを修正しながら作成していたが、結局完成させることできずに、一からコードを作成し直した。
+"When I consulted generative AI about how to use a specific software, it gave me answers that were somewhat accurate but also inaccurate in a way. It produced bugs. It made me realize again that I should read the documentation properly and understand it before using the software.",,生成AIにソフトウェアの使用方法について相談した際、ある程度正確だがある意味不正確な回答が返ってきてしまい。バグを発生させたことがある。ドキュメントをきちんと読んで、理解してからソフトを使用すべきだよなと改めて思った。
+"When I had the LLM generate a report, it provided links to non-existent papers. After incorporating paper information as context, it became able to display the correct links.",,LLMにレポートを生成させたら存在しない論文のリンクを提示された。その後背景知識として論文情報を取り込むことで正しいリンクが表示できるようになった。
+There is a possibility that we may not be able to keep up with cutting-edge research.,,最先端の研究を追いきれない可能性がある
+"If the given instructions are unclear, it will not produce the desired response, so through repeated use, we gradually learned what kind of instructions to give.",,こちらからの指示が不鮮明だと欲しい回答が得られないので、繰り返し使うことでどのような指示を与えるのが良いかを会得していった
+When ChatGPT insisted Hamamatsu was in the Owari region.,,chatgptが、浜松を尾張地方だと言い張った時。
+"Experience: Using uncommon words when writing my thesis
+Lesson Learned: Developing the habit of checking how frequently English expressions appear in academic papers using InMexes",,"経験：論文執筆に使用した際にあまり使われない単語を使ってしまっていたこと
+学び：InMexes を使って英語の表現がどれくらい論文で使われているか確認する習慣がついたこと"
+"The library update information wasn't reflected, resulting in inefficient program code. I learned that verifying the original source is essential.",,ライブラリの更新情報が反映されておらず、遠回りなプログラムコードになってしまった。やはり、１次情報の確認は必須だと学んだ。
+"・When lacking sufficient knowledge about AI, you may not obtain the desired information.
+・When organizing references, information such as DOIs may change randomly.",,"・AIの知識が足りない場合に、期待する情報が得られない。
+・Referenceの整理を行うと、DOI等の情報が出鱈目に変化してしまう"
+"ChatGPT-5 didn't fit the entire MTA text and arbitrarily truncated it, without telling me that it did. Because of this, the comparative analysis results for the clauses listed at the end of the document were missing. I struggled because I couldn't figure out why. Gemini-Pro can handle 1 million tokens, so I no longer need to worry about the input document size, making things much easier. As a lesson learned, I now include in the prompt to output the end of the document, confirming it reads the entire input.",,ChatGPT-5ではMTA条文全体が入り切らずに適当に端折られていたが、そのことを教えてくれなかった。そのため、文書の後ろに記載されている条文の比較解析結果が抜け落ちていた。その原因がわからず苦労した。gemini-proは100万トークンを入力でき、入力文書のサイズを気にしなくて良くなったのでやりやすくなった。学びとしては、文書の最後を出力するようにプロンプトに記載して、入力全体を読み込んでいることを確認するようになった。
+"I need the database processed, but it has been hardcoded.",,データベースを処理してほしいが、ハードコードされたことがあります。
+"I initially expected advanced things but didn't succeed, which is now why I've come to believe that it's better to start with simple things.",,最初から高度なことを期待してうまくいかなかったが、今は簡単なことから始めるのが良いと考えるようになった。
+I asked the language model too many questions and it ended up straying from the original goal I had decided.,,言語モデルに聞きすぎて、最初に決めたゴールから逸れた方向へ行ってしまった
+"After doing prompt engineering with Gemini GPT and setting up batch processing for LLMs on-premises, I found that even a 70B model often produces incoherent text. So I came to understand that output control before benchmarking itself is already a very time-consuming step.",,gemmini gptでプロンプトエンジニアリングしてからオンプレでllmのバッジ処理などを組むと70Bモデルでも内容が崩壊したテキストが出がちなので、ベンチマークにかける以前の出力コントロールでもかなり時間がかかる工程と理解した
+"We use it for curating literature, but it contains a certain percentage of hallucinations, making manual checks indispensable.",,文献のキュレーションに利用していますが、一定の割合でハルシネーションが含まれおり、マニュアルチェックは不可欠
+Lightweight and high-performance model,,軽量で優秀なモデル
+Not affiliated with any organization,,機関に所属していない
+Financial assistance for AI-trained personnel,,AI育成人材への金銭的補助
+I'm not really sure,,よく分かってません
+It might have been good to include questions about the accuracy of AI in one's own language. I've come to realize that whether you submit queries in English does indeed affect the precision of the responses you receive.,,自身の言語におけるAIの精度についても、設問が会ってもよかったかも知れません。やはりクエリを英語で投げるかどうかは、返ってくる精度に関連すると実感しています。
+I'm interested in the theme of how serious the problem actually is that disparities arise based on whether people can afford to pay for AI services or not.,,有料のAIサービスに課金できるかどうかで格差が生じてしまうという問題が、実際にはどれだけ深刻なのかというテーマに興味がある
+"I believe this is a highly meaningful endeavor, and I sincerely hope for its continued growth and success.",,非常に意義のある活動と思いますので、今後ますますご発展されることをお祈りしております。
+"I’d really like to discuss together about the issue of AI addiction. With questions like those in the IGDT-10 (Internet Gaming Disorder Test-10), such as ‘Have you ever used it to relieve unpleasant feelings?,’ I became very interested in whether people are using AI as a dopamine-inducing stimulus.",,AI Addictionの問題についてぜひ一緒に考えたいです。IGDT-10にあるような「嫌な気持ちを晴らすために使用したか」という質問等により、AIをドーパミン誘発刺激のために使用しているか、ぜひ知りたいと思いました。
+"Progress in this field is moving far too fast, making it extremely difficult to keep up with the latest technologies.",,この分野の進歩はあまりにも速く、最新の技術についていくのが非常に難しいです。
+"I want to know how AI tool users verify the accuracy of content generated by LLMs (primarily text), and to what extent. Personally, when results seem questionable, I either Google them or ask the LLM again. However, occasionally when the content is highly specialized, I can't determine whether it's correct or not.",,LLMから生成されたデータ（主にテキスト）について、AIツール利用者がどのように（どれぐらい）内容の正確性を確認しているか知りたい。自分は結果が怪しい場合ググったりLLMに聞き直したりしているが、たまに内容が専門的だと正誤判別できなくなることもあるので。
+"By asking AI when stuck with coding, I am now able to build programs that I couldn't before.",,コーディングで困った時にAIに聞くことによって、これまでできなかったようなプログラムの構築が可能になった。
+Identify bugs,,バグの特定
+"Sometimes it ends up creating things unrelated to the part you asked it to create, or it deletes parts that weren't actually unnecessary.",,作成してほしい部分とは無関係なものを作成してしまったり、不要でない箇所まで削除してしまうことがある。
+Using Claude Code led to reduced development time.,,Claude Codeを利用することで開発業務の時間短縮につながった。

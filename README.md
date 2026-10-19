@@ -129,7 +129,33 @@ Tell the instructor before class if you are doing this.
 | `data/` | The data files the classes read |
 | `figures/` | Pictures the documents show |
 | `ai_attempt.R` | An AI-written script that Class 5 runs and examines. Leave it as it is |
+| `project-brief.md` | The final project: what to do, what to hand in, how it is graded |
+| `project-eda.Rmd` | A first look at the survey, which the class goes through together |
+| `data/survey/` | The final project's data |
 | `SIRE516.Rproj` | The project file. Always open this first |
+
+## The final project's data
+
+`data/survey/` holds the BioHackathon 2025 AI survey: 105 people's answers on how they use
+AI in their work. Its authors released it free to reuse for any purpose (CC0). The files
+are unchanged from GigaDB. Two are not included: an `.xlsx` that is the same table as the
+cleaned `.csv`, and a short readme, whose licence and citation are given here.
+
+- **The data:** GigaDB, https://doi.org/10.5524/102783
+- **The article:** Sriwichai et al. (2026), *AI in practice: a multilingual survey of 2025
+  BioHackathon participants*, GigaByte, https://doi.org/10.46471/gigabyte.179
+
+| File | What it holds |
+|---|---|
+| `…_data_cleaned_ENG_R1.csv` | One row per person, in English. The table you analyse |
+| `…_cleaned_codebook_ENG_R1.csv` | What each column of that table means |
+| `…_GoogleForms.pdf` | The questionnaire: every question and option, and which question each person was sent to next |
+| `…_raw_anon_ENG_v1.csv` | The answers before cleaning, with the long written answers kept |
+| `…_original_languages_R1.csv` | Each answer in the language it was given in |
+| `Translation_lookup_table_R1.csv` | Each answer option in English, Thai and Japanese |
+| `README_R1.md` | The authors' notes on the data. Some file names, folders and counts in it differ from the files here; the files are right |
+
+If you use the data outside this course, cite the article.
 
 ## One rule
 

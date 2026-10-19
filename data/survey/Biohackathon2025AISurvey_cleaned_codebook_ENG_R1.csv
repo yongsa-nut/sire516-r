@@ -1,0 +1,41 @@
+﻿clean_column_name,raw_survey_question,description,type,example_values
+bh_participant,Are/were you a BioHackathon participant?,BioHackathon participation history,"categorical, multi-select","2025 BioHackathon participant in Japan, Not a BioHackathon participant, Participant of previous BioHackathons (any country)"
+field,What is your field?,Primary research field(s) chosen from predefined list,"categorical, multi-select","Genomics and transcriptomics, Systems biology, Machine learning and AI, Database management, Back-end development"
+field_other_text,What is your field?,"Free-text answers provided by user when selecting ""Other""",free-text string,"Drug discovery and nanomedicine, RDM"
+institution_type,What institution type do you work for?,Type(s) of employing institution from predefined list,"categorical, multi-select","Academia, Private sector, Public sector"
+institution_type_other_text,What institution type do you work for?,"Free-text answers provided by user when selecting ""Other""",free-text string,"Hospital, Small business owner"
+country,Which country do you work in?,Standardized country where respondent currently works,string,"Japan, United States, Germany, United Kingdom"
+age,What is your age?,"Age group of respondent (Blanks also include ""Prefer not to answer"")","ordinal, single choice","< 25 years old, 25 - 34, 35 - 44"
+gender,Which of the following best describes your gender?,"Self-reported gender (Blanks also include ""Prefer not to answer"")","categorical, single choice","Woman, Man, Non-binary"
+ai_use_level,Which of the following best describes your use of AI?,Overall AI usage level or role from predefined list,"ordinal, single choice","I am an AI researcher, I use AI everyday"
+ai_use_level_other_text,Which of the following best describes your use of AI?,"Free-text answers provided by user when selecting ""Other""",free-text string,it is complicated
+reason_no_ai,Is there a reason why you don't use AI?,Reasons for not using AI from predefined list,"categorical, multi-select","I don't trust the companies who make AI., I don't trust the results or underlying technology."
+reason_no_ai_other_text,Is there a reason why you don't use AI?,"Free-text answers provided by user when selecting ""Other""",free-text string,Environmental damage associated with AI training & usage
+ai_tools_used,Which AI tools do you use most often?,"Standardized, grouped list of most frequently used AI tools","free-text, multi-response","ChatGPT, Gemini, Claude, GitHub Copilot"
+task_coding,"What tasks do you use AI for? When you use AI for that task, which of the
+following best describes your approach? [Coding]",Use of AI and level of reliance for coding,"categorical, multi-select","I use AI to assist with specific parts of a task, I use AI to generate a first draft, which I then edit and finalize, I use AI to assist with specific parts of a task"
+task_research,"What tasks do you use AI for? When you use AI for that task, which of the
+following best describes your approach? [Research]",Use of AI and level of reliance for research,"categorical, multi-select","I use AI to assist with specific parts of a task, I use AI to generate a first draft, which I then edit and finalize, I use AI to assist with specific parts of a task"
+task_brainstorming,"What tasks do you use AI for? When you use AI for that task, which of the
+following best describes your approach? [Brainstorming]",Use of AI and level of reliance for brainstorming,"categorical, multi-select","I use AI to assist with specific parts of a task, I use AI to generate a first draft, which I then edit and finalize, I use AI to assist with specific parts of a task"
+task_writing,"What tasks do you use AI for? When you use AI for that task, which of the
+following best describes your approach? [Writing/Editing]",Use of AI and level of reliance for writing/editing,"categorical, multi-select","I use AI to assist with specific parts of a task, I use AI to generate a first draft, which I then edit and finalize, I use AI to assist with specific parts of a task"
+task_teaching,"What tasks do you use AI for? When you use AI for that task, which of the
+following best describes your approach? [Teaching and curriculum]",Use of AI and level of reliance for teaching,"categorical, multi-select","I use AI to assist with specific parts of a task, I use AI to generate a first draft, which I then edit and finalize, I use AI to assist with specific parts of a task"
+task_translation,"What tasks do you use AI for? When you use AI for that task, which of the
+following best describes your approach? [Translation]",Use of AI and level of reliance for translation,"categorical, multi-select","I use AI to assist with specific parts of a task, I use AI to generate a first draft, which I then edit and finalize, I use AI to assist with specific parts of a task"
+task_personal,"What tasks do you use AI for? When you use AI for that task, which of the
+following best describes your approach? [Personal use]",Use of AI and level of reliance for personal tasks,"categorical, multi-select","I use AI to assist with specific parts of a task, I use AI to generate a first draft, which I then edit and finalize, I use AI to assist with specific parts of a task"
+challenges_faced,"When using AI tools in your work, what challenges have you faced?",Challenges encountered when using AI tools from predefined list,"categorical, multi-select","Al outputs are inaccurate or unreliable, Ethical or privacy concerns, Over-reliance on AI leading to mistakes"
+challenges_faced_other_text,"When using AI tools in your work, what challenges have you faced?","Free-text answers provided by user when selecting ""Other""",free-text string,worried about the data and accuracy of estimation
+satisfaction_score,Please rate your overall satisfaction with your use of AI.,"Overall satisfaction with use of AI tools (1 = 'not at all', 5 = 'very satisfied')","ordinal, 1-5","1, 2, 3, 4, 5"
+improvements_desired,What would AI tools need to improve for you to be more satisfied?,Areas where AI tools need to improve from predefined list,"categorical, multi-select","Accuracy & reliability, Privacy, security & ethics"
+improvements_desired_other_text,What would AI tools need to improve for you to be more satisfied?,"Free-text answers provided by user when selecting ""Other""",free-text string,Less energy consumption
+inst_support_score,How would you describe the level of institutional support you receive regarding AI usage?,"Perceived level of institutional support for AI use (1 = 'none', 5 = 'very well')","ordinal, 1-5","1, 2, 3, 4, 5"
+inst_support_types,What kinds of support does your institution provide?,Types of institutional support provided for AI use from predefined list,"categorical, multi-select",Access to high-performance computing / GPU resources
+inst_support_types_other_text,What kinds of support does your institution provide?,"Free-text answers provided by user when selecting ""Other""",free-text string,Ad-hoc community groups
+concern_bias,How concerned are you with the following issues in relation to AI? [Bias in algorithms],"Concern level about bias in AI algorithms (1 = 'not concerned', 5 = 'very concerned')","ordinal, 1-5","1, 2, 3, 4, 5"
+concern_privacy,How concerned are you with the following issues in relation to AI? [Data privacy/security],Concern level about data privacy/security,"ordinal, 1-5","1, 2, 3, 4, 5"
+concern_ip,"How concerned are you with the following issues in relation to AI? [Intellectual property, ownership]",Concern level about intellectual property and ownership,"ordinal, 1-5","1, 2, 3, 4, 5"
+concern_misinfo,How concerned are you with the following issues in relation to AI? [Misinformation/Hallucinations],Concern level about misinformation and AI hallucinations,"ordinal, 1-5","1, 2, 3, 4, 5"
+concern_environment,How concerned are you with the following issues in relation to AI? [Environment impact],Concern level about environmental impact of AI computation,"ordinal, 1-5","1, 2, 3, 4, 5"
