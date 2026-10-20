@@ -29,16 +29,16 @@ their work. Their answers are public and free to reuse.
   step 3) into a new folder and work there; on Posit Cloud, start a new project from the
   repository.
 - **`project-eda.Rmd`** reads the table with you; the class goes through it together on
-  Tuesday 20 October. It rebuilds the article's Figure 1 and finds the traps in the table.
-  Its section 8 lists questions to start from; pick one that explains a 1–5 score.
+  Tuesday 20 October, step by step, from the source to one comparison answered with
+  `lm()`. Its section 8 lists questions to start from; pick one that explains a 1–5 score.
 - **The article:** Sriwichai et al. (2026), *AI in practice: a multilingual survey of 2025
   BioHackathon participants*, GigaByte, <https://doi.org/10.46471/gigabyte.179>
 
 A few things to get right:
 
 - `lm()` needs a number to explain. The numbers in this table are its 1–5 scores, such as
-  `satisfaction_score` and `inst_support_score`. Four of the five concern scores have no
-  1s or 5s (`project-eda.Rmd`, section 6).
+  `satisfaction_score` and `inst_support_score`. Be wary of the concern scores: four have
+  no 1s or 5s, and the fifth has none on the Thai form (`project-eda.Rmd`, section 5).
 - Nobody in the survey was assigned anything, so a result is a comparison, not a cause.
 - Decide your question before you fit the model, and report every model you fit in your
   `.Rmd`.

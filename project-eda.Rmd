@@ -1,6 +1,6 @@
 ---
 title: "SIRE 516 — Final project: the BioHackathon AI survey"
-subtitle: "A first look at the data"
+subtitle: "Exploring the data, step by step"
 output:
   html_document:
     toc: true
@@ -14,66 +14,64 @@ output:
 knitr::opts_chunk$set(echo = TRUE, collapse = TRUE)
 ```
 
-As in class, each new function is explained beside its first use. The longer explanations
-are collapsible notes, closed until you want them.
+We explore this survey together, one step at a time, the way you would explore any new
+data: start at the source, learn how it was collected, load it, look at its shape, then
+play with it and plot it. The last step answers one question with `lm()`.
+
+Almost everything here you have used in Classes 4–7. The new things are all about text:
+putting text in order, turning text into numbers, and searching inside text.
 
 ---
 
-# 1. The survey
+# 1. Start at the source
 
-In 2025, the people around the BioHackathon in Japan, run by the Database Center for Life
-Science (DBCLS), were asked how they use AI in their work. 105 answered, in English, Japanese or Thai. The questions cover how often they
-use it, for which tasks and how much of each task they hand over, what goes wrong, how
-satisfied they are, what their institution provides, and five concerns.
-
-The answers are public, free to reuse for any purpose (CC0):
+Before you open R, find out what the data is and where it came from.
 
 - **The data:** GigaDB, <https://doi.org/10.5524/102783>
 - **The article that describes it:** Sriwichai et al. (2026), *AI in practice: a
   multilingual survey of 2025 BioHackathon participants*, GigaByte,
   <https://doi.org/10.46471/gigabyte.179>
 
-The files are in `data/survey/` in your SIRE516 project folder (the one with
-`SIRE516.Rproj`), unchanged from GigaDB, and the code below reads them from there. If your
-folder has no `data/survey/`, download the course folder again into a new folder, so your
-own files stay in the old one, and work in the new one from now on. Two GigaDB files are
-not included: an `.xlsx` that is the same table as the cleaned `.csv`, and a short readme,
-whose licence and citation are given above.
+*Your turn:* open both pages. Who answered? How were they asked? In which languages? How
+many answered?
 
-Three of the files matter most:
+What the pages say:
 
-| File | What it holds |
-|---|---|
-| `…_data_cleaned_ENG_R1.csv` | One row per person, in English. **The table you analyse.** |
-| `…_cleaned_codebook_ENG_R1.csv` | What each column of that table means |
-| `…_GoogleForms.pdf` | The questionnaire itself: every question, every option, and which question each person was sent to next |
+- **Who:** participants and community members around the 2025 BioHackathon in Japan.
+- **How:** a Google Form, anonymous, in English, Japanese or Thai. 105 people submitted it.
+- **Optional:** almost every question. Only the language and the question on how often
+  you use AI had to be answered.
+- **Not shown to everyone:** some questions appeared only after certain answers.
 
-The rest:
-
-- `…_raw_anon_ENG_v1.csv`: the answers before cleaning, with the long written answers kept
-- `…_original_languages_R1.csv`: each answer in the language it was given in
-- `Translation_lookup_table_R1.csv`: each answer option in English, Thai and Japanese
-- `README_R1.md`: the authors' own notes on the data, worth reading once. Some file names,
-  folders and counts in it differ from the files here; the files are right
-
-**Open the questionnaire PDF now and keep it open.** Almost every question was optional,
-and some were shown only to some people. When a cell is blank, the questionnaire tells you
-whether that person was ever shown the question. If they were, the blank alone cannot tell
-you why.
-
-The article summarises the table in one figure:
+The answers are free to reuse for any purpose (CC0). The article sums them up in one
+figure, one question at a time:
 
 ![](https://gigabytejournal.com/admin/apis/public/article_shell/uploads/article_files/Gigabyte/Gigabyte/2026/gigabyte179/gigabyte-2026-179-g001.jpg)
 
 <small>Figure 1 of Sriwichai et al. (2026), GigaByte, CC BY 4.0.</small>
 
-Today you rebuild it, one panel at a time. That is the project's first step: before you
-ask the data a new question, reproduce what has already been reported from it. Each panel
-turns out to teach something about the table.
+The files are in `data/survey/` in your SIRE516 project folder (the one with
+`SIRE516.Rproj`), unchanged from GigaDB. If your folder has no `data/survey/`, download the
+course folder again (the README, step 3) into a new folder, and work in the new one from
+now on. Three files
+matter most:
+
+| File | What it holds |
+|---|---|
+| `…_data_cleaned_ENG_R1.csv` | One row per person, in English. **The table you analyse.** |
+| `…_cleaned_codebook_ENG_R1.csv` | What each column of that table means |
+| `…_GoogleForms.pdf` | The questionnaire: every question, every option, and which question each person was sent to next |
+
+**Open the questionnaire PDF and the codebook now, and keep them open,** from RStudio's
+Files pane or from your computer's file browser. When a cell in the table is blank, the
+questionnaire is how you find out whether that person was ever shown the question.
 
 ---
 
-# 2. Read it, and look
+# 2. Load it, and look at its shape
+
+*Predict:* the form had 105 answers. How many rows should the table have, and what is one
+row?
 
 ```{r}
 library(readr)
@@ -86,142 +84,117 @@ survey <- read_csv("data/survey/Biohackathon2025AISurvey_data_cleaned_ENG_R1.csv
 dim(survey)
 ```
 
-105 rows, one per person. 33 columns: one for each question or part of one (the task
-question has a column for each of its seven tasks), plus seven that hold what people wrote
-under *Other*. Not every question made it into the table. The language each person
-answered in, for one, is not there.
-
-*Predict:* the five `concern_` columns are scores from 1 to 5. What type should `glimpse()`
-show for them?
+105 rows: one person each. Each column holds the answers to one question, or to one part
+of a question. Look at all 33:
 
 ```{r}
 glimpse(survey)
 ```
 
-Four are `<dbl>`, numbers. `concern_misinfo` is `<chr>`, text. Look at its values:
+27 columns are text (`<chr>`) and 6 are numbers (`<dbl>`): the satisfaction score, the
+support score, and four of the five `concern_` scores.
 
-```{r}
-count(survey, concern_misinfo)
-```
-
-<details>
-<summary>**`count()`** — how many rows have each value</summary>
-
-`count(survey, concern_misinfo)` is short for
-
-```r
-survey |>
-  group_by(concern_misinfo) |>
-  summarise(n = n())
-```
-
-the group-and-count from Class 5. Add `sort = TRUE` to put the largest group first. Give
-it two columns, `count(table, a, b)`, and it counts each combination.
-
-</details>
-
-Two of the answers kept their label: `5 - Very concerned` and `1 - Not concerned at all`.
-Every value in a column has the same type, so one piece of text makes the whole column
-text. `mean()` of it returns `NA` with a warning. `parse_number()` keeps the number at the
-start of each value:
-
-```{r}
-survey <- survey |>
-  mutate(concern_misinfo = parse_number(concern_misinfo))
-
-count(survey, concern_misinfo)
-```
-
-<details>
-<summary>**`parse_number()`** — the number inside a piece of text</summary>
-
-From `readr`. It drops everything before the first number and everything after it:
-`parse_number("5 - Very concerned")` is 5, and `parse_number("$1,200")` is 1200. Values
-with no number become `NA`, and it warns you how many.
-
-</details>
-
-Section 6 comes back to this column. It is more interesting than it looks.
-
-The codebook says what each column holds:
-
-```{r}
-codebook <- read_csv("data/survey/Biohackathon2025AISurvey_cleaned_codebook_ENG_R1.csv",
-                     show_col_types = FALSE)
-
-codebook |>
-  select(clean_column_name, description) |>
-  knitr::kable()
-```
-
-<details>
-<summary>**`knitr::kable()`** — a table as a formatted table</summary>
-
-A tibble prints as text, and cuts long values short. `kable()` prints a table as a
-formatted table in the knitted page, every value in full. It changes how the table looks,
-not what it holds. `knitr::` calls a function from the `knitr` package without loading it
-with `library()`.
-
-</details>
-
-Columns ending in `_other_text` hold what people wrote when they picked *Other*. Several
-columns hold more than one answer per person; section 5 deals with those.
+*Predict:* the five `concern_` columns are all scores from 1 to 5. Why is
+`concern_misinfo` text? Section 5 answers it.
 
 ---
 
-# 3. Panel A: how often people use AI
+# 3. One column at a time
+
+`table()` from Class 4 counts each value. Add `useNA = "ifany"` and it counts the blanks
+(`NA` in R) too, which in a survey is half the story.
 
 ```{r}
-count(survey, ai_use_level, sort = TRUE)
+table(survey$ai_use_level, useNA = "ifany")
 ```
 
-61 of 105 chose *I use AI everyday*; one chose *I never use AI*. The AI researchers and
-developers answered with a role rather than a frequency.
+61 people use AI every day; one never does. Every value is spelled as the form wrote it,
+with one surprise: look closely at `I am an Al researcher` and `I use Al a few times a
+month`. That is *Al*, with a lower-case L, not *AI*. In many fonts the two look the same.
+Section 4 shows why it matters.
 
-`ggplot()` would put these bars in alphabetical order. To draw them in the article's
-order, turn the column into a **factor**: text with its possible values, its *levels*, in
-a fixed order. Type the levels as the questionnaire words them:
+Where people work:
+
+```{r}
+table(survey$country, useNA = "ifany")
+```
+
+14 values, one of them *Global*, and 6 blanks. 44 people work in Japan and 23 in Thailand,
+so a comparison between countries is, in practice, Japan against Thailand:
+
+```{r}
+sum(survey$country %in% c("Japan", "Thailand"))
+```
+
+67 of 105. Why are 6 blank? Country was optional and typed by hand. 5 people skipped it,
+and the authors' cleaning (`README_R1.md`) blanked one answer that was not a country.
+
+*Your turn:* count `age` and `gender`, blanks included.
+
+```{r}
+
+```
+
+## A cell with several answers
+
+Some questions said *tick all that apply*. Their cells hold every box a person ticked,
+joined by commas:
+
+```{r}
+head(survey$challenges_faced, 3)
+```
+
+To ask *did this person tick this box?*, search the text. `grepl("inaccurate", x)` gives
+TRUE where `x` contains *inaccurate* and FALSE where it does not. A blank gives FALSE.
+Search for a short, plain word that only that box contains. The word must appear exactly
+as you type it, capitals included, and leave out brackets: they mean something special to
+`grepl()`. (Note *Al outputs*
+above: the *Al* spelling is in these cells too.)
+
+```{r}
+survey <- survey |>
+  mutate(inaccurate = grepl("inaccurate", challenges_faced))
+
+table(survey$inaccurate)
+sum(is.na(survey$challenges_faced))
+```
+
+77 ticked it. But 4 people have no answer, and they are counted in the 28 FALSE too. One of
+them is the person who never uses AI, whom the form never showed this question. Decide what
+a blank means before you compare the groups. (Do not split the cells at their commas: some
+answers contain a comma themselves, such as *Data limitations (size, quality,
+accessibility)*.)
+
+---
+
+# 4. Text in order: factors
+
+Plot how often people use AI. Put the column on `y`, so the long labels fit:
+
+```{r}
+ggplot(survey, aes(y = ai_use_level)) +
+  geom_bar()
+```
+
+The bars are in alphabetical order, which tells you nothing. To choose the order, turn the
+column into a **factor**: text with a fixed list of values, its *levels*, in the order you
+give. `factor(x, levels = ...)` makes one. Type the levels as the questionnaire words them,
+in the order you want the bars from the bottom up: *never*, the developer, the researcher,
+then monthly, weekly and every day.
+
+*Predict:* every person should land in one of the seven levels. Will any be `NA`?
 
 ```{r}
 typed <- c("I never use AI", "I am an AI developer", "I am an AI researcher",
            "I use AI a few times a month", "I use AI a few times a week",
            "I use AI everyday", "Other")
+
+table(factor(survey$ai_use_level, levels = typed), useNA = "ifany")
 ```
 
-*Predict:* every person should land in one of the seven levels. Do they?
-
-```{r}
-count(survey, use = factor(ai_use_level, levels = typed))
-```
-
-<details>
-<summary>**`factor()`** — text with a fixed set of values, in a fixed order</summary>
-
-`factor(x, levels = ...)` keeps the values of `x` and records their order. Plots, tables
-and `count()` follow that order instead of the alphabet. A plot draws the first level
-nearest the origin, so on a y-axis the first level sits at the bottom. That is why `typed`
-starts with *never*.
-
-Any value of `x` that does not match a level **exactly** becomes `NA`, without a warning.
-
-Inside `count()`, `use = factor(...)` makes the new column first and counts it, as
-`mutate()` would.
-
-</details>
-
-14 people became `NA`, and nothing warned you. The 6 researchers and the 8 people who use
-AI a few times a month are gone. Ask the data what it actually holds:
-
-```{r}
-unique(survey$ai_use_level)
-```
-
-`unique()` lists each different value once.
-
-Look closely at `I use Al a few times a month` and `I am an Al researcher`. That is *Al*,
-with a lower-case L, not *AI*. In many fonts, including the one in the plots, the two look the same.
-The questionnaire says AI, the cleaned table says Al, and `factor()` matches exactly.
-**Copy values from the data, never from the questionnaire.**
+14 people became `NA`, and nothing warned you: a value that does not match a level
+**exactly** becomes `NA`. The 6 researchers and the 8 monthly users are spelled *Al* in
+the data. Copy the levels from the data, never from the questionnaire:
 
 ```{r}
 use_levels <- c("I never use AI", "I am an AI developer",
@@ -232,452 +205,198 @@ use_levels <- c("I never use AI", "I am an AI developer",
 survey <- survey |>
   mutate(use = factor(ai_use_level, levels = use_levels))
 
-count(survey, use)
+table(survey$use, useNA = "ifany")
+
+ggplot(survey, aes(y = use)) +
+  geom_bar()
 ```
 
-No `NA`. Now the panel; the article leaves out the two *Other* answers:
-
-```{r}
-survey |>
-  filter(use != "Other") |>
-  ggplot(aes(y = use)) +
-  geom_bar() +
-  labs(x = "Respondents", y = NULL)
-```
-
-The same as the article's panel A.
+No `NA`, and the bars run in order. A plot draws the first level next to where the two
+axes meet, so on a `y` axis *never* is at the bottom.
 
 ---
 
-# 4. Panel B: where they work
+# 5. Text into numbers
+
+Back to `concern_misinfo`:
 
 ```{r}
-countries <- count(survey, country, sort = TRUE)
-countries
+table(survey$concern_misinfo, useNA = "ifany")
 ```
 
-*Predict:* the article shows the countries with more than one respondent. How many rows
-will `filter(countries, n > 1)` keep?
+Two answers kept their labels: *5 - Very concerned* and *1 - Not concerned at all*. Every
+value in a column has one type (Class 4), so one piece of text makes the whole column
+text, and `mean()` gives up:
 
 ```{r}
-filter(countries, n > 1)
+mean(survey$concern_misinfo, na.rm = TRUE)
 ```
 
-Ten, not the article's nine. The extra row is `NA`: 6 people left the country blank, or wrote
-something that is not a country and was cleared when the table was cleaned. Drop it, and
-draw:
+`parse_number()`, from `readr`, keeps the number at the start of each value:
 
 ```{r}
-countries |>
-  filter(n > 1, !is.na(country)) |>
-  ggplot(aes(x = n, y = reorder(country, n))) +
-  geom_col() +
-  labs(x = "Respondents", y = NULL)
+survey <- survey |>
+  mutate(concern_misinfo = parse_number(concern_misinfo))
+
+table(survey$concern_misinfo, useNA = "ifany")
 ```
 
-The same as panel B. Read it for what it means for your project: 67 of the 105 work in
-Japan or Thailand, Germany has 10, and 6 gave no country. The remaining 22 are spread
-thinly: no other country has more than 4 people. A comparison between countries is, in practice, Japan against
-Thailand, with everyone else as a mixed third group. Decide what to do with the 6 who gave
-no country.
+Now look at the other four concerns the same way:
+
+```{r}
+table(survey$concern_bias, useNA = "ifany")
+table(survey$concern_privacy, useNA = "ifany")
+table(survey$concern_ip, useNA = "ifany")
+table(survey$concern_environment, useNA = "ifany")
+```
+
+*Predict:* what is missing from all four?
+
+**No 1s and no 5s at all**, and 29 to 41 blanks each. Misinformation, asked in the same
+grid on the form, has 49 fives and only 10 blanks. The likeliest reading is that answers
+at the two ends of the scale were lost before the file was published, and became blanks.
+The files cannot prove it, but it means these four columns cannot give you a mean or a
+comparison you can defend. Leave them out of your project.
+
+Misinformation is not clean either. The file of answers in their original languages
+(`…_original_languages_R1.csv`) shows
+that the 20 people who answered on the Thai form gave it no 1s or 5s, and left 9 of its 10
+blanks. Its mean is mostly English and Japanese answers, and comparing it between
+countries partly compares the forms.
 
 ---
 
-# 5. Panel C: what people use AI for, and how much
+# 6. Plot, and explore
 
-The task question is a grid: seven tasks, and for each one, three boxes.
-
-- **Complete:** *I use AI to complete the entire task with little to no editing*
-- **Draft:** *I use AI to generate a first draft, which I then edit and finalize*
-- **Assist:** *I use AI to assist with specific parts of a task*
-
-It says *Check all that apply*, so a cell can hold more than one box, joined by `", "`.
-Put the seven task columns into one long table, as in Class 5:
+Satisfaction with AI, from 1 to 5:
 
 ```{r}
-tasks <- survey |>
-  select(starts_with("task_")) |>
-  pivot_longer(everything(), names_to = "task", values_to = "answer")
+table(survey$satisfaction_score, useNA = "ifany")
 
-dim(tasks)
+ggplot(survey, aes(x = satisfaction_score)) +
+  geom_bar()
 ```
 
-105 people × 7 tasks = 735 rows. `starts_with("task_")` picks the columns whose names start
-with `task_`, and `everything()` picks every column there is: here, all seven.
-
-To count the boxes, the obvious move is to split each cell at its commas, one answer per
-row, and count the answers.
-
-*Predict:* how many different answers will that give?
-
-```{r}
-tasks |>
-  filter(!is.na(answer)) |>
-  separate_longer_delim(answer, delim = ", ") |>
-  count(answer)
-```
-
-<details>
-<summary>**`separate_longer_delim()`** — one row per piece of a cell</summary>
-
-From `tidyr`. `separate_longer_delim(answer, delim = ", ")` cuts each value of `answer`
-wherever `", "` appears and gives each piece its own row; the other columns are copied
-down. It is the right tool when no answer contains the separator. Here one does.
-
-</details>
-
-Four, not three. *Which I then edit and finalize* is not an answer. It is the second half
-of the Draft box, which contains a comma itself, so the split cut it in two. Every Draft
-box was counted twice: 280 under each half. Nothing errored.
-
-The same trap waits in three more columns, where an answer contains a comma:
-
-- `improvements_desired`: *Privacy, security & ethics*
-- `challenges_faced`: *Data limitations (size, quality, accessibility)* and *Lack of
-  institutional support (software, hardware, guidance)*
-- `inst_support_types`: *Access to institutional AI software or platforms (licenses,
-  subscriptions)*
-
-So ask each cell a yes-or-no question instead: **does it contain this box's text?**
-
-```{r}
-tasks <- tasks |>
-  mutate(complete = grepl("complete the entire task", answer, fixed = TRUE),
-         draft    = grepl("generate a first draft", answer, fixed = TRUE),
-         assist   = grepl("assist with specific parts", answer, fixed = TRUE))
-
-tasks |>
-  filter(!is.na(answer)) |>
-  group_by(task) |>
-  summarise(answered = n(), assist = sum(assist), draft = sum(draft),
-            complete = sum(complete))
-```
-
-<details>
-<summary>**`grepl()`** — does this text appear in each value?</summary>
-
-`grepl("first draft", x, fixed = TRUE)` returns TRUE or FALSE for each value of `x`: does
-it contain *first draft*? A blank (`NA`) gives FALSE. `sum()` of the result counts the
-TRUEs, as in Class 4.
-
-`fixed = TRUE` means *match these characters exactly*. Without it, characters such as
-`(` `)` `.` `+` are pattern symbols, not text. Search for
-`"Lack of institutional support (software, hardware, guidance)"` without `fixed = TRUE`
-and it matches nobody: not an error, a count of 0. With it, 17 people.
-
-Match a phrase that only the box you want contains: *complete the entire task* appears in
-nothing but the Complete box.
-
-</details>
-
-Now compare with the article's panel C. Assist matches in every row. Draft and Complete
-mostly do not: coding, for example, has 51 drafters and 16 completers here, 40 and 11 in the
-article.
-
-The article says people indicated whether they used AI "primarily" to assist, draft or
-complete: one answer per task. But the form let people tick several, and some did. Count the cells with more than one box (TRUE counts as 1, so the three columns add up
-to the number of boxes):
-
-```{r}
-tasks |>
-  filter(assist + draft + complete > 1) |>
-  count(task)
-```
-
-The article's numbers come back if each person is counted **once** per task, under the
-lightest use they ticked: Assist if they ticked it, otherwise Draft, otherwise Complete.
-
-```{r}
-tasks |>
-  filter(!is.na(answer)) |>
-  mutate(mode = case_when(assist ~ "Assist",
-                          draft ~ "Draft",
-                          complete ~ "Complete")) |>
-  count(task, mode) |>
-  pivot_wider(names_from = mode, values_from = n) |>
-  select(task, Assist, Draft, Complete)
-```
-
-<details>
-<summary>**`case_when()`** — the first condition that is TRUE wins</summary>
-
-From `dplyr`. Each line is `condition ~ value`. For each row, `case_when()` takes the
-value of the first line whose condition is TRUE, so the order of the lines is the rule.
-A row where no line is TRUE gets `NA`.
-
-</details>
-
-All 21 numbers match the article's table. Its percentages divide by 105, so a blank cell
-counts as not using AI for that task. The dataset's `README_R1.md` warns that a blank
-could also mean the task does not apply to that person, or that they skipped the
-question.
-
-Neither way of counting is wrong. They answer different questions: *how many people let AI
-draft their code?* is 51; *how many people's lightest use of AI for code is drafting?* is
-40. Every figure you make for the project rests on choices like these. Write yours down.
-
----
-
-# 6. Panel D: what people worry about
-
-Put the five concern columns into one long table, and take each one's mean, as the article
-did:
-
-```{r}
-concern <- survey |>
-  select(starts_with("concern_")) |>
-  pivot_longer(everything(), names_to = "issue", values_to = "score")
-
-concern |>
-  group_by(issue) |>
-  summarise(answered = sum(!is.na(score)),
-            mean = round(mean(score, na.rm = TRUE), 2)) |>
-  arrange(desc(mean))
-```
-
-Every number matches panel D. Misinformation tops the list by three quarters of a
-point.
-
-*Predict:* before you write that sentence in a report, what would you look at?
-
-The answers under each mean. Plot them:
-
-```{r, fig.width = 9, fig.height = 3}
-concern |>
-  filter(!is.na(score)) |>
-  ggplot(aes(x = score)) +
-  geom_bar() +
-  facet_wrap(~ issue, nrow = 1) +
-  labs(x = "Concern (1 = not concerned at all, 5 = very concerned)", y = "People")
-```
-
-`nrow = 1` puts the five panels in one row. Every panel uses the same scales, so the
-empty places at 1 and 5 line up.
-
-And count them, blanks included:
-
-```{r}
-concern |>
-  count(issue, score) |>
-  pivot_wider(names_from = score, values_from = n, values_fill = 0, names_sort = TRUE)
-```
-
-`values_fill = 0` writes 0 where a combination never occurs, instead of `NA`.
-`names_sort = TRUE` puts the new columns in order, 1 to 5, then the blanks.
-
-Four of the five issues have **no 1s and no 5s at all**. Only misinformation uses the
-whole scale, and 49 people gave it a 5.
-
-Question 21 of the questionnaire is a single grid: the five issues are its rows, and every
-row has the same five boxes, 1 to 5. Out of 76 people who rated bias, not one picked 5,
-while 49 of 95 picked 5 for misinformation on the same grid. And the blanks run high
-for exactly those four: 29 to 41 of 105, against 10 for misinformation.
-
-One explanation fits both: answers in the two end boxes were lost from four of the five
-columns before the file was published, and became `NA`. Test it. A lost answer would show
-up as a blank, so the blanks should fall on the people likeliest to have picked an end
-box. Assume that people with a strong view on one issue often hold strong views on
-others; this table cannot show it, since the strong views are what went missing. Then
-those people are the ones with a strong view on misinformation. Group people by their
-misinformation answer:
-
-```{r}
-survey |>
-  mutate(blanks = is.na(concern_bias) + is.na(concern_privacy) +
-                  is.na(concern_ip) + is.na(concern_environment)) |>
-  filter(!is.na(concern_misinfo)) |>
-  group_by(concern_misinfo) |>
-  summarise(people = n(), left_any_blank = sum(blanks > 0))
-```
-
-Blanks climb with the misinformation answer: 1 of the 5 who gave it a 2, against 38 of
-the 49 who gave it a 5. Only one person gave it a 1, too few to say anything about the low
-end. The climb fits lost end answers.
-
-Very concerned people skipping more rows would also give a climb. Skipping does not
-explain the first finding, though: among the 76 bias answers that are there, not one is a
-5. For that, every person who would have picked 5 must have skipped the row.
-
-The files cannot settle it. The dataset's README treats a blank concern answer as a
-non-response whose reason cannot be determined. Treat lost end answers as the likeliest reading, not as a
-fact. One more detail fits it: where the 1s and 5s did survive, they kept their labels,
-*1 - Not concerned at all* and *5 - Very concerned*, and the labels are why section 2
-found that column stored as text. **The column that looked broken is the one that kept
-its 1s and 5s.**
-
-<details>
-<summary>**How sure is this?** The same pattern, by the language people answered in</summary>
-
-The original-language file holds each answer as it was given, in English, Japanese or
-Thai, in the same row order as the cleaned table. The lookup table lists every answer
-option in all three languages, so joining the AI-use answer to it gives each person's
-language:
-
-```{r}
-original <- read_csv(
-  "data/survey/Biohackathon2025AISurvey_data_raw_anon_original_languages_R1.csv",
-  show_col_types = FALSE)
-
-options <- read_csv("data/survey/Translation_lookup_table_R1.csv",
-                    show_col_types = FALSE) |>
-  pivot_longer(everything(), names_to = "language", values_to = "text")
-
-# column 7 of the original file is the AI-use question
-form <- tibble(text = original[[7]]) |>
-  left_join(options, by = "text")
-
-dim(form)
-
-survey |>
-  mutate(language = form$language) |>
-  count(language, concern_misinfo) |>
-  pivot_wider(names_from = concern_misinfo, values_from = n, values_fill = 0,
-              names_sort = TRUE)
-```
-
-`original[[7]]` takes column 7 as a vector. `$` would need the column's name, and here
-the name is the whole question. The two `NA` languages are the two people who answered
-*Other* in their own words.
-
-On the English and Japanese forms, 48 of 83 people gave misinformation a 5, and one left
-it blank. On the Thai form: no 1s, no 5s, and 9 blanks out of 20.
-
-Could that be people in Thailand answering differently, rather than the form? Take only
-the people who work in Thailand, and split them by the form they chose:
-
-```{r}
-survey |>
-  mutate(language = form$language) |>
-  filter(country == "Thailand") |>
-  count(language, concern_misinfo)
-```
-
-Same country, different form. On the English form, 3 of 7 gave misinformation a 5 and
-none left it blank. On the Thai form, none gave a 5 and 7 of 16 left it blank. People
-chose their form, so the two groups may differ in other ways, and the numbers are small.
-But it is what you would see if the Thai form lost its end answers, and country alone
-does not explain it.
-
-</details>
-
-What this does to panel D, if the reading is right: a mean of 2s, 3s and 4s can never be
-above 4. For four of the five issues, the most and the least concerned would be missing
-from the mean. Misinformation may rank first partly because it is the only issue whose 5s
-were kept, on two of the three forms.
-
-For the project: the four concern columns other than `concern_misinfo` cannot give you a
-mean, a ranking, or a comparison you can defend. `concern_misinfo` shows no sign of the
-problem among the people who answered in English or Japanese.
-
----
-
-# 7. The rest of the table
-
-Satisfaction and institutional support have no missing ends. Both run from 1 to 5, and
-their blanks are few:
-
-```{r}
-count(survey, satisfaction_score)
-count(survey, inst_support_score)
-```
-
-Satisfaction's one blank is the person who never uses AI, who was never asked; support
-has three.
+Most people are satisfied: 69 of 104 gave a 4 or a 5. The warning, *Removed 1 row*, is
+the 105th person: the one who never uses AI, whom the form never asked about satisfaction.
 
 Some blanks are there by design. Question 18, *what would AI tools need to improve*, was
-only shown to people who rated their satisfaction 1, 2 or 3:
+skipped for people who rated their satisfaction 4 or 5. Check it with a two-way
+`table()`, as in Class 4:
 
 ```{r}
-survey |>
-  group_by(satisfaction_score) |>
-  summarise(people = n(), answered_q18 = sum(!is.na(improvements_desired)))
+table(survey$satisfaction_score, is.na(survey$improvements_desired), useNA = "ifany")
 ```
 
-Nobody who gave a 4 or a 5 answered it, because nobody who gave a 4 or a 5 saw it. Of the
-question's 71 blanks, 70 are people who were never asked: the 69 who gave a 4 or a 5, and
-the one person who never uses AI, whom the questionnaire sent past every AI question.
-Check the questionnaire before you read a blank as anything.
+`TRUE` means blank. Everyone who gave a 4 or a 5 is blank, because nobody who gave a 4 or
+a 5 saw the question. Check the questionnaire before you read a blank as anything.
 
-Which tools people named. People were asked to separate them with commas, and no tool
-name contains one, so splitting at the commas is safe here:
+Now two columns together. Does satisfaction look different by how often people use AI?
+
+```{r, fig.height = 6}
+ggplot(survey, aes(x = satisfaction_score)) +
+  geom_bar() +
+  facet_wrap(~ use)
+```
+
+*Predict:* which group looks most satisfied? Which groups are too small to say? (The
+*never* panel is empty for the same reason as the warning.)
+
+*Your turn:* draw `inst_support_score` the same way, one panel per `use`.
 
 ```{r}
-survey |>
-  filter(!is.na(ai_tools_used)) |>
-  separate_longer_delim(ai_tools_used, delim = ", ") |>
-  count(ai_tools_used, sort = TRUE)
+
 ```
 
-77 people named at least one tool, and 63 of them named ChatGPT.
+---
 
-## Try it: the challenges
+# 7. One question, answered with `lm()`
 
-`challenges_faced` holds the boxes each person ticked at question 15: nine named
-challenges, plus *Other*. Count how many people ticked each named challenge, and draw it.
+> Are people who use AI every day more satisfied with it than people who use it a few
+> times a week?
 
-Two of the boxes contain commas, and two others are spelled with *Al* in the cleaned
-table. Match a short phrase that only one box contains.
-
-<details>
-<summary>**One answer**</summary>
+Keep those two groups, and look before you model:
 
 ```{r}
-challenges <- survey |>
-  summarise(
-    inaccurate     = sum(grepl("inaccurate or unreliable", challenges_faced, fixed = TRUE)),
-    over_reliance  = sum(grepl("Over-reliance", challenges_faced, fixed = TRUE)),
-    ethics_privacy = sum(grepl("Ethical or privacy", challenges_faced, fixed = TRUE)),
-    data_limits    = sum(grepl("Data limitations", challenges_faced, fixed = TRUE)),
-    compute_cost   = sum(grepl("computational cost", challenges_faced, fixed = TRUE)),
-    integrating    = sum(grepl("existing workflows", challenges_faced, fixed = TRUE)),
-    no_support     = sum(grepl("Lack of institutional support", challenges_faced,
-                               fixed = TRUE)),
-    hard_to_read   = sum(grepl("difficult to interpret", challenges_faced, fixed = TRUE)),
-    too_complex    = sum(grepl("too complex", challenges_faced, fixed = TRUE))
-  ) |>
-  pivot_longer(everything(), names_to = "challenge", values_to = "people")
+two <- survey |>
+  filter(ai_use_level %in% c("I use AI a few times a week", "I use AI everyday"))
 
-challenges
+table(two$ai_use_level)
 
-ggplot(challenges, aes(x = people, y = reorder(challenge, people))) +
-  geom_col() +
-  labs(x = "People who ticked it", y = NULL)
+ggplot(two, aes(x = satisfaction_score)) +
+  geom_bar() +
+  facet_wrap(~ ai_use_level, ncol = 1)
 ```
 
-77 of the 101 people who answered ticked *outputs are inaccurate or unreliable*.
+`ncol = 1` stacks the two panels in one column, so their bars line up. 23 weekly users, 61
+daily ones. The daily users pile up at 4 and 5. Now the model, as in Class 7:
 
-</details>
+```{r}
+fit <- lm(satisfaction_score ~ ai_use_level, data = two)
+summary(fit)
+confint(fit)
+```
+
+The baseline is the weekly group: in alphabetical order, *a few times a week* comes
+before *everyday* (Class 7, section 4). So *everyday* is 1 for daily users and 0 for weekly
+ones:
+
+> satisfaction = 3.30 + 0.79 × everyday
+
+Weekly users average 3.30; daily users average 0.79 points more. Report it, estimate and
+interval first:
+
+> People who use AI every day rated their satisfaction 0.79 points higher, on average,
+> than people who use it a few times a week (95% CI 0.41 to 1.18; p = 0.00008).
+
+Then read it honestly, as in Class 7:
+
+- **A comparison, not a cause.** Nobody was assigned how often to use AI. People who like
+  it may simply use it more.
+- **The same spread in both groups?** The model assumes it, but the weekly group is smaller
+  and spreads more. Welch's test, `t.test()`'s default in Class 7, does not assume it (see
+  below).
+- **The score is treated as a number,** as if the step from 3 to 4 were the same size as
+  the step from 4 to 5.
+- **The question came after the look.** We picked it after the plot in section 6, so treat
+  the answer as a lead. In your project, decide the question first (Class 7, section 8).
+- **Who answered.** 84 volunteers around one hackathon, not bioinformaticians in general.
+
+Welch's test:
+
+```{r}
+t.test(satisfaction_score ~ ai_use_level, data = two)
+```
+
+The interval has its signs flipped, as in Class 7, section 4: `t.test()` takes the first
+group minus the second, weekly minus daily. Turned round, it is 0.36 to 1.23 points, with
+p = 0.0008: wider, and the same conclusion. Say which one you report.
+
+That is the whole shape of your project: a question, a look, two figures, a model, and the
+story.
 
 ---
 
 # 8. Where to take it
 
-The project asks a question of this table that the article does not answer. Some that it
-can support:
+Questions this table can support:
 
-- Who is most satisfied with AI: everyday users or occasional ones? Those with more
-  institutional support? `lm()` from Class 7 gives a first answer to both, treating the
-  1–5 score as a number: a difference in average satisfaction between groups, or a change
-  per point of support.
-- Does institutional support differ between Japan, Thailand and everywhere else?
-- Do the people who report inaccurate output rate their satisfaction lower?
-- Do people hand more of their coding to AI than their writing? 89 people answered both,
-  so you can compare them person by person. Decide first what a blank, and a cell with
-  several boxes, will mean.
-- Which challenges go with which tasks?
+- Are people with more support from their institution more satisfied with AI?
+- Is institutional support different in Japan and in Thailand? (Keep in mind the forms,
+  below.)
+- Do the people who ticked *outputs are inaccurate or unreliable* rate their satisfaction
+  lower?
 
 Before you choose, know what this table is:
 
-- **105 people who chose to answer**, around one hackathon. It describes them, not
-  bioinformaticians in general.
-- **Small groups.** 6 AI researchers, 4 AI developers, 1 person who never uses AI.
-  A group of 4 gives a mean, but a weak one.
+- **105 people who chose to answer**, around one hackathon.
+- **Small groups.** 6 AI researchers, 4 developers, 1 person who never uses AI.
 - **Almost every question optional.** Count the blanks in every column you use, and check
   the questionnaire for why they are there.
-- **The concern columns.** Four have no 1s or 5s, most likely lost, and so does
-  `concern_misinfo` on the Thai form (section 6).
-- **Country and form go together.** Most people in Thailand answered on the Thai form, and
-  section 6 found signs that the form changed what was recorded. A difference between
-  countries may be a difference between forms.
+- **The concern columns** (section 5): four without 1s or 5s, and misinformation without
+  them on the Thai form.
+- **Country and form go together.** The original-language file shows that 16 of the 23
+  people in Thailand answered on the Thai form, so a difference between countries may
+  partly be a difference between forms.
 
 > **Before you trust a summary of this survey, look at the answers under it.**
