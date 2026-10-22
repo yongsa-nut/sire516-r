@@ -44,7 +44,7 @@ What the pages say:
 - **Not shown to everyone:** some questions appeared only after certain answers.
 
 The answers are free to reuse for any purpose (CC0). The article sums them up in one
-figure, one question at a time:
+figure, one question at a time (it shows when you knit this file):
 
 ![](https://gigabytejournal.com/admin/apis/public/article_shell/uploads/article_files/Gigabyte/Gigabyte/2026/gigabyte179/gigabyte-2026-179-g001.jpg)
 
@@ -53,8 +53,7 @@ figure, one question at a time:
 The files are in `data/survey/` in your SIRE516 project folder (the one with
 `SIRE516.Rproj`), unchanged from GigaDB. If your folder has no `data/survey/`, download the
 course folder again (the README, step 3) into a new folder, and work in the new one from
-now on. Three files
-matter most:
+now on. Three files matter most:
 
 | File | What it holds |
 |---|---|
@@ -76,7 +75,6 @@ row?
 ```{r}
 library(readr)
 library(dplyr)
-library(tidyr)
 library(ggplot2)
 
 survey <- read_csv("data/survey/Biohackathon2025AISurvey_data_cleaned_ENG_R1.csv",
@@ -127,7 +125,8 @@ sum(survey$country %in% c("Japan", "Thailand"))
 ```
 
 67 of 105. Why are 6 blank? Country was optional and typed by hand. 5 people skipped it,
-and the authors' cleaning (`README_R1.md`) blanked one answer that was not a country.
+and the authors' cleaning blanked one answer that was not a country (their notes are
+`README_R1.md`, in the same folder).
 
 *Your turn:* count `age` and `gender`, blanks included.
 
@@ -146,10 +145,9 @@ head(survey$challenges_faced, 3)
 
 To ask *did this person tick this box?*, search the text. `grepl("inaccurate", x)` gives
 TRUE where `x` contains *inaccurate* and FALSE where it does not. A blank gives FALSE.
-Search for a short, plain word that only that box contains. The word must appear exactly
-as you type it, capitals included, and leave out brackets: they mean something special to
-`grepl()`. (Note *Al outputs*
-above: the *Al* spelling is in these cells too.)
+Pick a short word that only that box contains, typed exactly as the data spells it
+(capitals, and *Al* as in *Al outputs* above), with no brackets: brackets mean something
+special to `grepl()`.
 
 ```{r}
 survey <- survey |>
@@ -169,25 +167,26 @@ accessibility)*.)
 
 # 4. Text in order: factors
 
-Plot how often people use AI. Put the column on `y`, so the long labels fit:
+Plot how often people use AI. Class 6 gave `geom_bar()` one column, on `x`. It can go on
+`y` instead: the bars then lie sideways, so the long labels fit:
 
 ```{r}
 ggplot(survey, aes(y = ai_use_level)) +
   geom_bar()
 ```
 
-The bars are in alphabetical order, which tells you nothing. To choose the order, turn the
-column into a **factor**: text with a fixed list of values, its *levels*, in the order you
-give. `factor(x, levels = ...)` makes one. Type the levels as the questionnaire words them,
-in the order you want the bars from the bottom up: *never*, the developer, the researcher,
-then monthly, weekly and every day.
+The bars are in alphabetical order from the bottom up, which tells you nothing. To choose
+the order, turn the column into a **factor**: text with a fixed list of values, its
+*levels*, in the order you give. `factor(x, levels = ...)` makes one. Type the levels as
+the questionnaire words them, in the order you want the bars from the bottom up: *never*,
+monthly, weekly and every day, then the developer, the researcher, and *Other*.
 
 *Predict:* every person should land in one of the seven levels. Will any be `NA`?
 
 ```{r}
-typed <- c("I never use AI", "I am an AI developer", "I am an AI researcher",
-           "I use AI a few times a month", "I use AI a few times a week",
-           "I use AI everyday", "Other")
+typed <- c("I never use AI", "I use AI a few times a month",
+           "I use AI a few times a week", "I use AI everyday",
+           "I am an AI developer", "I am an AI researcher", "Other")
 
 table(factor(survey$ai_use_level, levels = typed), useNA = "ifany")
 ```
@@ -197,10 +196,12 @@ table(factor(survey$ai_use_level, levels = typed), useNA = "ifany")
 the data. Copy the levels from the data, never from the questionnaire:
 
 ```{r}
-use_levels <- c("I never use AI", "I am an AI developer",
-                "I am an Al researcher",            # Al, lower-case L, as in the data
-                "I use Al a few times a month",     # here too
-                "I use AI a few times a week", "I use AI everyday", "Other")
+use_levels <- c("I never use AI",
+                "I use Al a few times a month",     # Al, lower-case L, as in the data
+                "I use AI a few times a week", "I use AI everyday",
+                "I am an AI developer",
+                "I am an Al researcher",            # here too
+                "Other")
 
 survey <- survey |>
   mutate(use = factor(ai_use_level, levels = use_levels))
@@ -214,6 +215,15 @@ ggplot(survey, aes(y = use)) +
 No `NA`, and the bars run in order. A plot draws the first level next to where the two
 axes meet, so on a `y` axis *never* is at the bottom.
 
+*Your turn:* your count of `age` in section 3 was not in age order, because text sorts like
+a dictionary. Make a factor from `age` in a new column, as you did for `use`, with its five
+groups in order, copying them exactly from that count. Count it again: only the 2 blanks
+should be `NA`.
+
+```{r}
+
+```
+
 ---
 
 # 5. Text into numbers
@@ -224,21 +234,22 @@ Back to `concern_misinfo`:
 table(survey$concern_misinfo, useNA = "ifany")
 ```
 
-Two answers kept their labels: *5 - Very concerned* and *1 - Not concerned at all*. Every
-value in a column has one type (Class 4), so one piece of text makes the whole column
-text, and `mean()` gives up:
+On the form, only the two ends of the scale had labels, and here they kept them:
+*5 - Very concerned* and *1 - Not concerned at all*. Every value in a column has one type
+(Class 4), so one piece of text makes the whole column text, and `mean()` gives up:
 
 ```{r}
 mean(survey$concern_misinfo, na.rm = TRUE)
 ```
 
-`parse_number()`, from `readr`, keeps the number at the start of each value:
+`parse_number()`, from `readr`, keeps the first number in each value and drops the rest.
+Put the numbers in a new column, `misinfo`, so the chunk works however often you run it:
 
 ```{r}
 survey <- survey |>
-  mutate(concern_misinfo = parse_number(concern_misinfo))
+  mutate(misinfo = parse_number(concern_misinfo))
 
-table(survey$concern_misinfo, useNA = "ifany")
+table(survey$misinfo, useNA = "ifany")
 ```
 
 Now look at the other four concerns the same way:
@@ -253,16 +264,20 @@ table(survey$concern_environment, useNA = "ifany")
 *Predict:* what is missing from all four?
 
 **No 1s and no 5s at all**, and 29 to 41 blanks each. Misinformation, asked in the same
-grid on the form, has 49 fives and only 10 blanks. The likeliest reading is that answers
-at the two ends of the scale were lost before the file was published, and became blanks.
-The files cannot prove it, but it means these four columns cannot give you a mean or a
-comparison you can defend. Leave them out of your project.
+grid on the form, has 49 fives and only 10 blanks. Look back at its table: its 1s and 5s
+are exactly the two labelled answers. The likeliest reading is that in the other four, the
+labelled answers at the two ends of the scale were lost before the files were published,
+and became blanks. Even the file of answers before cleaning (`…_raw_anon_ENG_v1.csv`, in
+the same folder) has no 1s or 5s in these four. The files cannot prove this reading, but
+either way these four columns cannot give you a mean or a comparison you can defend.
+Leave them out of your project.
 
 Misinformation is not clean either. The file of answers in their original languages
-(`…_original_languages_R1.csv`) shows
-that the 20 people who answered on the Thai form gave it no 1s or 5s, and left 9 of its 10
-blanks. Its mean is mostly English and Japanese answers, and comparing it between
-countries partly compares the forms.
+(`…_original_languages_R1.csv`) shows that the 20 people who answered on the Thai form
+(their answers are in Thai script) gave misinformation no 1s or 5s, the same gap as the
+other four, and that 9 of its 10 blanks are theirs. Its mean is
+mostly English and Japanese answers, and comparing it between countries partly compares
+the forms.
 
 ---
 
@@ -278,7 +293,8 @@ ggplot(survey, aes(x = satisfaction_score)) +
 ```
 
 Most people are satisfied: 69 of 104 gave a 4 or a 5. The warning, *Removed 1 row*, is
-the 105th person: the one who never uses AI, whom the form never asked about satisfaction.
+the one person not in those 104: the one who never uses AI, whom the form never asked
+about satisfaction.
 
 Some blanks are there by design. Question 18, *what would AI tools need to improve*, was
 skipped for people who rated their satisfaction 4 or 5. Check it with a two-way
@@ -299,12 +315,15 @@ ggplot(survey, aes(x = satisfaction_score)) +
   facet_wrap(~ use)
 ```
 
-*Predict:* which group looks most satisfied? Which groups are too small to say? (The
-*never* panel is empty for the same reason as the warning.)
+*Predict:* which group looks most satisfied? Look at where each group's bars sit, not how
+tall they are: the panels share one count axis, and *everyday* has 61 people. Which groups
+are too small to say? (The *never* panel is empty for the same reason as the warning.)
 
-*Your turn:* draw `inst_support_score` the same way, one panel per `use`.
+*Your turn:* draw `inst_support_score` the same way, one panel per `use`. How many rows
+does the warning remove, and who are they? (A two-way `table()`, as for question 18,
+finds them.)
 
-```{r}
+```{r, fig.height = 6}
 
 ```
 
@@ -325,11 +344,15 @@ table(two$ai_use_level)
 
 ggplot(two, aes(x = satisfaction_score)) +
   geom_bar() +
-  facet_wrap(~ ai_use_level, ncol = 1)
+  facet_wrap(~ ai_use_level, ncol = 1) +
+  labs(title = "Daily users pile up at 4 and 5",
+       x = "Satisfaction with AI (1 to 5)",
+       y = "Number of people")
 ```
 
-`ncol = 1` stacks the two panels in one column, so their bars line up. 23 weekly users, 61
-daily ones. The daily users pile up at 4 and 5. Now the model, as in Class 7:
+`ncol = 1` stacks the two panels in one column, so their bars line up. `labs()` (Class 6)
+gives the figure a title that says what it shows, and axis names anyone can read. 23
+weekly users, 61 daily ones. Now the model, as in Class 7:
 
 ```{r}
 fit <- lm(satisfaction_score ~ ai_use_level, data = two)
@@ -343,8 +366,9 @@ ones:
 
 > satisfaction = 3.30 + 0.79 × everyday
 
-Weekly users average 3.30; daily users average 0.79 points more. Report it, estimate and
-interval first:
+Weekly users average 3.30; daily users average 0.79 points more. The p-value, `8.25e-05`
+in the output, is about 0.00008 (Class 7, section 3). Report the result with the estimate
+and interval first:
 
 > People who use AI every day rated their satisfaction 0.79 points higher, on average,
 > than people who use it a few times a week (95% CI 0.41 to 1.18; p = 0.00008).
@@ -354,12 +378,14 @@ Then read it honestly, as in Class 7:
 - **A comparison, not a cause.** Nobody was assigned how often to use AI. People who like
   it may simply use it more.
 - **The same spread in both groups?** The model assumes it, but the weekly group is smaller
-  and spreads more. Welch's test, `t.test()`'s default in Class 7, does not assume it (see
-  below).
+  and spreads more. The model uses one spread for both, mostly the daily users' smaller
+  one, so its interval is likely a little too narrow. Welch's test, `t.test()`'s default in
+  Class 7, does not assume equal spread (see below).
 - **The score is treated as a number,** as if the step from 3 to 4 were the same size as
   the step from 4 to 5.
 - **The question came after the look.** We picked it after the plot in section 6, so treat
-  the answer as a lead. In your project, decide the question first (Class 7, section 8).
+  the answer as a lead. In your project, explore first, then write down your question and
+  your model before you fit it (Class 7, section 8).
 - **Who answered.** 84 volunteers around one hackathon, not bioinformaticians in general.
 
 Welch's test:
@@ -369,11 +395,13 @@ t.test(satisfaction_score ~ ai_use_level, data = two)
 ```
 
 The interval has its signs flipped, as in Class 7, section 4: `t.test()` takes the first
-group minus the second, weekly minus daily. Turned round, it is 0.36 to 1.23 points, with
-p = 0.0008: wider, and the same conclusion. Say which one you report.
+group minus the second, weekly minus daily. Turned round, it is 0.36 to 1.23 points: wider
+than the model's, and still wholly above zero, with p = 0.0008. In your project, choose
+which one you will report before you see which interval is narrower (Class 7, section 4),
+and say which.
 
-That is the whole shape of your project: a question, a look, two figures, a model, and the
-story.
+That is the whole shape of your project: a question, a look, figures with a job, a model,
+and the story.
 
 ---
 
